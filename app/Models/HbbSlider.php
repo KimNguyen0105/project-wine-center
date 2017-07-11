@@ -30,12 +30,12 @@ class HbbSlider extends Eloquent
 	];
 
 	protected $dates = [
-		'update_at'
+		'updated_at'
 	];
 
 	protected $fillable = [
 		'link',
 		'status',
-		'update_at'
+		'updated_at'
 	];
 }

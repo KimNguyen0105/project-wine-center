@@ -44,3 +44,4 @@ Route::get('/admin/delete-menu-{id}','Admin\AdminController@getDeleteMenu')->mid
 Route::post('/admin/delete-menu-{id}','Admin\AdminController@postDeleteMenu')->middleware('not.login');
 Route::get('/admin/edit-menu-{id}','Admin\AdminController@getEditMenu')->middleware('not.login');
 Route::post('/admin/edit-menu-{id}','Admin\AdminController@postEditMenu')->middleware('not.login');
+
