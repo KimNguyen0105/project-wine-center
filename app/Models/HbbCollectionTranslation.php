@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Created by Reliese Model.
+ * Date: Tue, 11 Jul 2017 09:23:07 +0000.
+ */
+
+namespace App\Models;
+
+use Reliese\Database\Eloquent\Model as Eloquent;
+
+/**
+ * Class HbbCollectionTranslation
+ * 
+ * @property int $id
+ * @property int $language_id
+ * @property int $collection_id
+ * @property string $collection_name
+ *
+ * @package App\Models
+ */
+class HbbCollectionTranslation extends Eloquent
+{
+	protected $table = 'hbb_collection_translation';
+	public $timestamps = false;
+
+	protected $casts = [
+		'language_id' => 'int',
+		'collection_id' => 'int'
+	];
+
+	protected $fillable = [
+		'language_id',
+		'collection_id',
+		'collection_name'
+	];
+}

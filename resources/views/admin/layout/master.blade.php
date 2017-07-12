@@ -15,6 +15,8 @@
     <link href="{{URL::asset('')}}css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="{{URL::asset('')}}css/nprogress.css" rel="stylesheet">
+    {{--datatable--}}
+    <link href="{{URL::asset('')}}css/jquery.dataTables.min.css" rel="stylesheet">
 {{--<!-- iCheck -->--}}
 {{--<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">--}}
 
@@ -65,11 +67,16 @@
 
 <!-- Custom Theme Scripts -->
 <script src="{{URL::asset('')}}js/custom.min.js"></script>
+{{--Theme DataTable--}}
+
+<script src="{{URL::asset('')}}js/dataTables.bootstrap.min.js"></script>
+<script src="{{URL::asset('')}}js/jquery.dataTables.min.js"></script>
 <script>
     $(".language_tab li:first").addClass("active");
     $(".tab-content .tab-pane:first").addClass("in");
     $(".tab-content .tab-pane:first").addClass("active");
 </script>
 @yield('scripts')
+
 </body>
 </html>

@@ -39,6 +39,7 @@
                             <li><a href="tables_dynamic.html">Table Dynamic</a></li>
                         </ul>
                     </li>
+                    <li><a href="{{URL::asset('')}}admin/slider"><i class="fa fa-bug"></i> Slider management</a></li>
                     <li><a href="{{URL::asset('')}}admin/1-menu-management"><i class="fa fa-bug"></i> Menu management</a>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/1-menu-management"><i class="fa fa-bug"></i> Send mail example</a>

@@ -43,3 +43,11 @@ Route::post('/admin/delete-menu-{id}','Admin\AdminController@postDeleteMenu')->m
 Route::get('/admin/edit-menu-{id}','Admin\AdminController@getEditMenu')->middleware('not.login');
 Route::post('/admin/edit-menu-{id}','Admin\AdminController@postEditMenu')->middleware('not.login');
 
+//slider management
+Route::get('/admin/slider','Admin\SliderController@getSlider')->middleware('not.login');
+Route::get('/admin/create-slider','Admin\SliderController@getCreateNewSlider')->middleware('not.login');
+Route::post('/admin/create-slider','Admin\SliderController@postCreateNewSlider')->middleware('not.login');
+Route::get('/admin/edit-slider-{id}','Admin\SliderController@getEditSlider')->middleware('not.login');
+Route::post('/admin/edit-slider-{id}','Admin\SliderController@postEditSlider')->middleware('not.login');
+Route::get('admin/delete-slider-{id}','Admin\SliderController@getDeleteSlider')->middleware('not.login');
+Route::post('admin/delete-slider-{id}','Admin\SliderController@postDeleteSlider')->middleware('not.login');

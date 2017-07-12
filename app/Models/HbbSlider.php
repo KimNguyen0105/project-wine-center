@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Sun, 09 Jul 2017 11:35:40 +0000.
+ * Date: Tue, 11 Jul 2017 09:23:08 +0000.
  */
 
 namespace App\Models;
@@ -16,26 +16,26 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $link
  * @property int $status
  * @property \Carbon\Carbon $created_at
- * @property \Carbon\Carbon $update_at
+ * @property \Carbon\Carbon $updated_at
+ * @property int $sort_order
  *
  * @package App\Models
  */
 class HbbSlider extends Eloquent
 {
 	protected $table = 'hbb_slider';
-	public $timestamps = false;
-
+    protected $timestamp = [
+        'updated_at' => true
+    ];
 	protected $casts = [
-		'status' => 'int'
-	];
-
-	protected $dates = [
-		'updated_at'
+		'status' => 'int',
+		'sort_order' => 'int'
 	];
 
 	protected $fillable = [
 		'link',
 		'status',
-		'updated_at'
+        'updated_at',
+		'sort_order'
 	];
 }

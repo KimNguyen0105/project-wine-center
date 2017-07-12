@@ -5,7 +5,7 @@
  *
  * For the official documentation visit http://docs.cksource.com/ckfinder3-php/
  */
-
+include_once "plugins/Watermark/Watermark.php";
 /*============================ PHP Error Reporting ====================================*/
 // http://docs.cksource.com/ckfinder3-php/debugging.html
 
@@ -70,12 +70,20 @@ if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/image
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => '/images/',
+    'baseUrl'      => 'http://'.$_SERVER['SERVER_NAME'].'/project-wine-center/public/images/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
     'filesystemEncoding' => 'UTF-8',
 );
+//$config['plugins'] = [
+//    'imagePath' =>'http://img.youtube.com/vi/vkUpfw4Hf3w/0.jpg',
+//    'position' => [
+//        'right' => 10,
+//        'bottom' => 10
+//    ]
+//];
+$config['plugins'][] = 'Watermark';
 
 /*================================ Resource Types =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_resourceTypes
@@ -83,8 +91,8 @@ $config['backends'][] = array(
 $config['defaultResourceTypes'] = '';
 
 $config['resourceTypes'][] = array(
-    'name'              => 'Files', // Single quotes not allowed.
-    'directory'         => 'files',
+    'name'              => 'collection', // Single quotes not allowed.
+    'directory'         => 'collection',
     'maxSize'           => 0,
     'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
     'deniedExtensions'  => '',
@@ -92,8 +100,8 @@ $config['resourceTypes'][] = array(
 );
 
 $config['resourceTypes'][] = array(
-    'name'              => 'Images',
-    'directory'         => 'images',
+    'name'              => 'slider',
+    'directory'         => 'slider',
     'maxSize'           => 0,
     'allowedExtensions' => 'bmp,gif,jpeg,jpg,png',
     'deniedExtensions'  => '',
@@ -148,6 +156,7 @@ $config['debug'] = false;
 
 $config['pluginsDirectory'] = __DIR__ . '/plugins';
 $config['plugins'] = array();
+
 
 /*================================ Cache settings =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_cache
