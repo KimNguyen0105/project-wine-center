@@ -97,4 +97,16 @@ class AddressController extends Controller
             dd($e);
         }
     }
+    public function getDeleteAddress($id)
+    {
+        return view('admin.address.delete-address',[
+           'id' => $id
+        ]);
+    }
+    public function postDeleteAddress($id)
+    {
+        HbbAddress::where('id',$id)->delete();
+        return redirect('admin/1-address-management')->with('success','Deleted successfully');
+    }
+
 }
