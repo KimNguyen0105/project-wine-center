@@ -175,7 +175,8 @@ class AdminController extends Controller
         $language = HbbLanguage::get();
         foreach ($language as $lang) {
 
-            DB::table('hbb_menu_translation')->where('menu_id', $id)
+            DB::table('hbb_menu_translation')
+                ->where('menu_id', $id)
                 ->where('language_id', $lang->id)
                 ->update(
                     [

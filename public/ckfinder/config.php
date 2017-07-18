@@ -70,7 +70,7 @@ if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/image
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => 'http://'.$_SERVER['SERVER_NAME'].'/project-wine-center/public/images/',
+    'baseUrl'      => 'http://'.$_SERVER['SERVER_NAME'].'/project-wine-center/public/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
@@ -91,22 +91,15 @@ $config['plugins'][] = 'Watermark';
 $config['defaultResourceTypes'] = '';
 
 $config['resourceTypes'][] = array(
-    'name'              => 'collection', // Single quotes not allowed.
-    'directory'         => 'collection',
+    'name'              => 'Images', // Single quotes not allowed.
+    'directory'         => 'images',
     'maxSize'           => 0,
     'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
     'deniedExtensions'  => '',
     'backend'           => 'default'
 );
 
-$config['resourceTypes'][] = array(
-    'name'              => 'slider',
-    'directory'         => 'slider',
-    'maxSize'           => 0,
-    'allowedExtensions' => 'bmp,gif,jpeg,jpg,png',
-    'deniedExtensions'  => '',
-    'backend'           => 'default'
-);
+
 
 /*================================ Access Control =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_roleSessionVar

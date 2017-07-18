@@ -30,7 +30,13 @@ class SliderController extends Controller
     {
         $sliders = new HbbSlider();
         $sliders->sort_order = $request->get('sort_order');
-        $sliders->link = $request->get('imgSlider');
+        if($request->get('imgSlider') != null)
+        {
+            $sliders->link = $request->get('imgSlider');
+        } else {
+            $sliders->link = 'default.jpg';
+        }
+
         $sliders->created_at = Carbon::now();
         $sliders->updated_at = Carbon::now();
         $sliders->status = 1;

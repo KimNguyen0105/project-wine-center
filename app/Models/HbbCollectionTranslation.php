@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Tue, 11 Jul 2017 09:23:07 +0000.
+ * Date: Tue, 18 Jul 2017 01:46:47 +0000.
  */
 
 namespace App\Models;
@@ -16,6 +16,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $language_id
  * @property int $collection_id
  * @property string $collection_name
+ * @property string $slug
  *
  * @package App\Models
  */
@@ -32,6 +33,7 @@ class HbbCollectionTranslation extends Eloquent
 	protected $fillable = [
 		'language_id',
 		'collection_id',
-		'collection_name'
+		'collection_name',
+		'slug'
 	];
 }

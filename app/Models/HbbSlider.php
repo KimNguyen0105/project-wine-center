@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Tue, 11 Jul 2017 09:23:08 +0000.
+ * Date: Tue, 18 Jul 2017 01:46:47 +0000.
  */
 
 namespace App\Models;
@@ -24,9 +24,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
 class HbbSlider extends Eloquent
 {
 	protected $table = 'hbb_slider';
-    protected $timestamp = [
-        'updated_at' => true
-    ];
+
 	protected $casts = [
 		'status' => 'int',
 		'sort_order' => 'int'
@@ -35,7 +33,6 @@ class HbbSlider extends Eloquent
 	protected $fillable = [
 		'link',
 		'status',
-        'updated_at',
 		'sort_order'
 	];
 }

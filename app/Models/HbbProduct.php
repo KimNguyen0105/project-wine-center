@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Tue, 11 Jul 2017 09:23:08 +0000.
+ * Date: Tue, 18 Jul 2017 01:46:47 +0000.
  */
 
 namespace App\Models;
@@ -18,20 +18,15 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property \Carbon\Carbon $updated_at
  * @property int $collection_id
  * @property bool $status
- * @property string $description
  * @property float $price
  * @property int $brand_id
- * @property string $slug
  * @property int $country_id
  *
  * @package App\Models
  */
 class HbbProduct extends Eloquent
 {
-	public $incrementing = false;
-
 	protected $casts = [
-		'id' => 'int',
 		'collection_id' => 'int',
 		'status' => 'bool',
 		'price' => 'float',
@@ -43,10 +38,8 @@ class HbbProduct extends Eloquent
 		'avatar',
 		'collection_id',
 		'status',
-		'description',
 		'price',
 		'brand_id',
-		'slug',
 		'country_id'
 	];
 }

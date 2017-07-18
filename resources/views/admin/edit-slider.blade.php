@@ -24,8 +24,8 @@
                         <div class="form-group">
                             <label>Status</label>
                             <select class="form-control" name="status">
-                                <option value="0" @if($sliders->status==1) selected @endif>Show</option>
-                                <option value="1" @if($sliders->status==0) selected @endif>Hide</option>
+                                <option value="0" @if($sliders->status==0) selected @endif>Hide</option>
+                                <option value="1" @if($sliders->status==1) selected @endif>Show</option>
                             </select>
 
                         </div>

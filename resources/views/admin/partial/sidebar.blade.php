@@ -40,6 +40,15 @@
                         </ul>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/slider"><i class="fa fa-bug"></i> Slider management</a></li>
+
+                    <li><a><i class="fa fa-table"></i> Product Management<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{URL::asset('')}}admin/1-product">Product</a></li>
+                            <li><a href="{{URL::asset('')}}admin/1-collection">Collection</a></li>
+                            <li><a>Brand</a></li>
+                            <li><a>Country</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{URL::asset('')}}admin/1-menu-management"><i class="fa fa-bug"></i> Menu management</a>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/1-menu-management"><i class="fa fa-bug"></i> Send mail example</a>

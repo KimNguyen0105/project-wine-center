@@ -71,6 +71,7 @@
 
 <script src="{{URL::asset('')}}js/dataTables.bootstrap.min.js"></script>
 <script src="{{URL::asset('')}}js/jquery.dataTables.min.js"></script>
+{{--<script src="{{URL::asset('')}}ckeditor/ckeditor.js"></script>--}}
 <script>
     $(".language_tab li:first").addClass("active");
     $(".tab-content .tab-pane:first").addClass("in");

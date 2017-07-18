@@ -30,17 +30,24 @@
                             <th>Sort Order</th>
                             <th>Created at</th>
                             <th>Updated at</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($sliders as $slider)
-
                             <tr>
                                 <td><img src="{{URL::asset('')}}images/slider/{{$slider->link}}" style="height:150px; width:100%" /></td>
                                 <td>{{$slider->sort_order}}</td>
                                 <td>{{$slider->created_at}}</td>
                                 <td>{{$slider->updated_at}}</td>
+                                <td>
+                                    @if($slider->status == 1)
+                                        <a class="label label-success">Actived</a>
+                                    @else
+                                        <a class="label label-danger">Inactive</a>
+                                    @endif
+                                </td>
                                 <td>
                                     <a href="{{URL::asset('')}}admin/edit-slider-{{$slider->id}}"
                                        class="btn btn-xs btn-primary editlink"><span

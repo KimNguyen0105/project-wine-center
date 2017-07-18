@@ -51,3 +51,20 @@ Route::get('/admin/edit-slider-{id}','Admin\SliderController@getEditSlider')->mi
 Route::post('/admin/edit-slider-{id}','Admin\SliderController@postEditSlider')->middleware('not.login');
 Route::get('admin/delete-slider-{id}','Admin\SliderController@getDeleteSlider')->middleware('not.login');
 Route::post('admin/delete-slider-{id}','Admin\SliderController@postDeleteSlider')->middleware('not.login');
+
+//product managerment
+Route::get('/admin/{id}-product','Admin\ProductController@getProduct')->middleware('not.login');
+Route::get('/admin/product/create-product','Admin\ProductController@getCreateProduct')->middleware('not.login');
+Route::post('/admin/product/create-product','Admin\ProductController@postCreateProduct')->middleware('not.login');
+Route::get('/admin/product/edit-product-{id}','Admin\ProductController@getEditProduct')->middleware('not.login');
+Route::post('/admin/product/edit-product-{id}','Admin\ProductController@postEditProduct')->middleware('not.login');
+Route::get('/admin/product/delete-product-{id}','Admin\ProductController@getDeleteProduct')->middleware('not.login');
+Route::post('/admin/product/delete-product-{id}','Admin\ProductController@postDeleteProduct')->middleware('not.login');
+//collection
+Route::get('/admin/{id}-collection','Admin\CollectionController@getCollection')->middleware('not.login');
+Route::get('/admin/collection/create-new-collection','Admin\CollectionController@getCreateCollection')->middleware('not.login');
+Route::post('/admin/collection/create-new-collection','Admin\CollectionController@postCreateCollection')->middleware('not.login');
+Route::get('/admin/collection/edit-collection-{id}','Admin\CollectionController@getEditCollection')->middleware('not.login');
+Route::post('/admin/collection/edit-collection-{id}','Admin\CollectionController@postEditCollection')->middleware('not.login');
+Route::get('/admin/collection/delete-collection-{id}','Admin\CollectionController@getDeleteCollection')->middleware('not.login');
+Route::post('/admin/collection/delete-collection-{id}','Admin\CollectionController@postDeleteCollection')->middleware('not.login');

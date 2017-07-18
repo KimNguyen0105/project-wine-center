@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Tue, 11 Jul 2017 09:23:08 +0000.
+ * Date: Tue, 18 Jul 2017 01:46:47 +0000.
  */
 
 namespace App\Models;
@@ -14,8 +14,9 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * 
  * @property int $id
  * @property int $language_id
- * @property int $news_id
- * @property int $news_name
+ * @property int $menu_news_id
+ * @property string $menu_news_name
+ * @property string $slug
  *
  * @package App\Models
  */
@@ -26,13 +27,13 @@ class HbbMenuNewsTranslation extends Eloquent
 
 	protected $casts = [
 		'language_id' => 'int',
-		'news_id' => 'int',
-		'news_name' => 'int'
+		'menu_news_id' => 'int'
 	];
 
 	protected $fillable = [
 		'language_id',
-		'news_id',
-		'news_name'
+		'menu_news_id',
+		'menu_news_name',
+		'slug'
 	];
 }

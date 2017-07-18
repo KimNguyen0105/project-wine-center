@@ -12,8 +12,7 @@
                         <div class="form-group">
                             <label>Image</label>
                             <input class="form-control" type="text" name="imgSlider" id="imgSlider"/>
-                            <img class="img-responsive" id="blah" >
-                            <a href="#" class="btn btn-default" id="btnSelectImage">Choose Image</a>
+                            <img class="img-responsive" id="blah" ><a href="#" class="btn btn-default" id="btnSelectImage">Choose Image</a>
 
                             <div class="clearfix"></div>
                         </div>
@@ -24,8 +23,8 @@
                         <div class="form-group">
                             <label>Status</label>
                             <select class="form-control" name="status">
-                                <option value="0" >Show</option>
-                                <option value="1" >Hide</option>
+                                <option value="0" >Hide</option>
+                                <option value="1" >Show</option>
                             </select>
 
                         </div>
