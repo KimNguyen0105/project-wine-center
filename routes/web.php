@@ -68,3 +68,52 @@ Route::get('/admin/collection/edit-collection-{id}','Admin\CollectionController@
 Route::post('/admin/collection/edit-collection-{id}','Admin\CollectionController@postEditCollection')->middleware('not.login');
 Route::get('/admin/collection/delete-collection-{id}','Admin\CollectionController@getDeleteCollection')->middleware('not.login');
 Route::post('/admin/collection/delete-collection-{id}','Admin\CollectionController@postDeleteCollection')->middleware('not.login');
+//brand
+Route::get('/admin/{id}-brand','Admin\BrandController@getBrand')->middleware('not.login');
+Route::get('/admin/brand/create-brand','Admin\BrandController@getCreateNewBrand')->middleware('not.login');
+Route::post('/admin/brand/create-brand','Admin\BrandController@postCreateNewBrand')->middleware('not.login');
+Route::get('/admin/brand/edit-brand-{id}','Admin\BrandController@getDetailBrand')->middleware('not.login');
+Route::post('/admin/brand/edit-brand-{id}','Admin\BrandController@postDetailBrand')->middleware('not.login');
+Route::get('/admin/brand/delete-brand-{id}','Admin\BrandController@getDeleteBrand')->middleware('not.login');
+Route::post('/admin/brand/delete-brand-{id}','Admin\BrandController@postDeleteBrand')->middleware('not.login');
+//country
+Route::get('/admin/{id}-country','Admin\CountryController@getCountry')->middleware('not.login');
+Route::get('/admin/country/create-country','Admin\CountryController@getCreateNewCountry')->middleware('not.login');
+Route::post('/admin/country/create-country','Admin\CountryController@postCreateNewCountry')->middleware('not.login');
+Route::get('/admin/country/edit-country-{id}','Admin\CountryController@getDetailCountry')->middleware('not.login');
+Route::post('/admin/country/edit-country-{id}','Admin\CountryController@postDetailCountry')->middleware('not.login');
+Route::get('/admin/country/delete-country-{id}','Admin\CountryController@getDeleteCountry')->middleware('not.login');
+Route::post('/admin/country/delete-country-{id}','Admin\CountryController@postDeleteCountry')->middleware('not.login');
+
+//Menu News Management
+Route::get('/admin/{id}-menu-news','Admin\MenuNewsController@getMenuNews')->middleware('not.login');
+Route::get('/admin/menu-news/create-menu-news','Admin\MenuNewsController@getCreateNewMenuNews')->middleware('not.login');
+Route::post('/admin/menu-news/create-menu-news','Admin\MenuNewsController@postCreateNewMenuNews')->middleware('not.login');
+Route::get('/admin/menu-news/edit-menu-news-{id}','Admin\MenuNewsController@getDetailMenuNews')->middleware('not.login');
+Route::post('/admin/menu-news/edit-menu-news-{id}','Admin\MenuNewsController@postDetailMenuNews')->middleware('not.login');
+Route::get('/admin/menu-news/delete-menu-news-{id}','Admin\MenuNewsController@getDeleteMenuNews')->middleware('not.login');
+Route::post('/admin/menu-news/delete-menu-news-{id}','Admin\MenuNewsController@postDeleteMenuNews')->middleware('not.login');
+//News management
+Route::get('/admin/{id}-news','Admin\NewsController@getNews')->middleware('not.login');
+Route::get('/admin/news/create-news','Admin\NewsController@getCreateNews')->middleware('not.login');
+Route::post('/admin/news/create-news','Admin\NewsController@postCreateNews')->middleware('not.login');
+Route::get('/admin/news/edit-news-{id}','Admin\NewsController@getEditNews')->middleware('not.login');
+Route::post('/admin/news/edit-news-{id}','Admin\NewsController@postEditNews')->middleware('not.login');
+Route::get('/admin/news/delete-news-{id}','Admin\NewsController@getDeleteNews')->middleware('not.login');
+Route::post('/admin/news/delete-news-{id}','Admin\NewsController@postDeleteNews')->middleware('not.login');
+
+//About management
+Route::get('/admin/{id}-wine-center','Admin\WineCenterController@getWineCenter')->middleware('not.login');
+Route::get('/admin/wine-center/edit-wine-center-{id}','Admin\WineCenterController@getEditWineCenter')->middleware('not.login');
+Route::post('/admin/wine-center/edit-wine-center-{id}','Admin\WineCenterController@postEditWineCenter')->middleware('not.login');
+Route::get('/admin/wine-center/delete-wine-center-{id}','Admin\WineCenterController@getDeleteWineCenter')->middleware('not.login');
+Route::post('/admin/wine-center/delete-wine-center-{id}','Admin\WineCenterController@postDeleteWineCenter')->middleware('not.login');
+
+//Address management
+Route::get('/admin/{id}-address-management','Admin\AddressController@getAddress')->middleware('not.login');
+Route::get('/admin/address/create-address','Admin\AddressController@getCreateAddress')->middleware('not.login');
+Route::post('/admin/address/create-address','Admin\AddressController@postCreateAddress')->middleware('not.login');
+Route::get('/admin/address/edit-address-{id}','Admin\AddressController@getEditAddress')->middleware('not.login');
+Route::post('/admin/address/edit-address-{id}','Admin\AddressController@postEditAddress')->middleware('not.login');
+Route::get('/admin/address/delete-address-{id}','Admin\AddressController@getDeleteAddress')->middleware('not.login');
+Route::post('/admin/address/delete-address-{id}','Admin\AddressController@postDeleteAddress')->middleware('not.login');

@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>ADMIN</span></a>
+            <a href="{{URL::asset('/')}}admin" class="site_title"><i class="fa fa-paw"></i> <span>ADMIN</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -27,31 +27,31 @@
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="index.html">Dashboard</a></li>
-                            <li><a href="index2.html">Dashboard2</a></li>
-                            <li><a href="index3.html">Dashboard3</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="tables.html">Tables</a></li>
-                            <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                            <li><a href="{{URL::asset('/')}}admin">Dashboard</a></li>
+                            <li><a href="{{URL::asset('/')}}admin">Dashboard2</a></li>
+                            <li><a href="{{URL::asset('/')}}admin">Dashboard3</a></li>
                         </ul>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/slider"><i class="fa fa-bug"></i> Slider management</a></li>
-
                     <li><a><i class="fa fa-table"></i> Product Management<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{URL::asset('')}}admin/1-product">Product</a></li>
                             <li><a href="{{URL::asset('')}}admin/1-collection">Collection</a></li>
-                            <li><a>Brand</a></li>
-                            <li><a>Country</a></li>
+                            <li><a href="{{URL::asset('')}}admin/1-brand">Brand</a></li>
+                            <li><a href="{{URL::asset('')}}admin/1-country">Country</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-table"></i> News management <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{URL::asset('')}}admin/1-news">News</a></li>
+                            <li><a href="{{URL::asset('')}}admin/1-menu-news">News Menu</a></li>
                         </ul>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/1-menu-management"><i class="fa fa-bug"></i> Menu management</a>
                     </li>
-                    <li><a href="{{URL::asset('')}}admin/1-menu-management"><i class="fa fa-bug"></i> Send mail example</a>
+                    <li><a href="{{URL::asset('')}}admin/1-wine-center"><i class="fa fa-bug"></i> Wine Center management</a>
+                    </li>
+                    <li><a href="{{URL::asset('')}}admin/1-address-management"><i class="fa fa-bug"></i> Address management</a>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/resize-image"><i class="fa fa-bug"></i> Resize image example</a>
                     </li>

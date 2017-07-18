@@ -19,7 +19,7 @@
                                 <li><a data-toggle="tab" href="#home{{$lang->id}}">{{$lang->language}}</a></li>
                             @endforeach
                         </ul>
-
+                        <script src="{{URL::asset('')}}ckeditor/ckeditor.js"></script>
                         <div class="tab-content">
                             @foreach($language as $lang)
                                 <div id="home{{$lang->id}}" class="tab-pane fade">
@@ -42,6 +42,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <script>
+                                    CKEDITOR.replace('product_content{{$lang->id}}', {
+                                        filebrowserBrowseUrl: '{{URL::asset('')}}ckfinder/ckfinder.html',
+                                        filebrowserImageBrowseUrl: '{{URL::asset('')}}ckfinder/ckfinder.html?type=Images',
+                                        filebrowserUploadUrl: '{{URL::asset('')}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                                        filebrowserImageUploadUrl: '{{URL::asset('')}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
+                                    });
+
+                                </script>
                             @endforeach
                             <div class="ln_solid"></div>
                             <div class="form-group">

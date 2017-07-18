@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Tue, 18 Jul 2017 01:46:47 +0000.
+ * Date: Tue, 18 Jul 2017 09:12:37 +0000.
  */
 
 namespace App\Models;
@@ -17,11 +17,12 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property \Carbon\Carbon $updated_at
  * @property bool $status
  * @property string $email
+ * @property string $name
  * @property int $language_id
+ * @property int $product_id
  * @property string $phone
- * @property int $expert_id
- * @property \Carbon\Carbon $date
- * @property string $content
+ * @property string $date
+ * @property string $message
  *
  * @package App\Models
  */
@@ -32,20 +33,17 @@ class HbbSubscribeWine extends Eloquent
 	protected $casts = [
 		'status' => 'bool',
 		'language_id' => 'int',
-		'expert_id' => 'int'
-	];
-
-	protected $dates = [
-		'date'
+		'product_id' => 'int'
 	];
 
 	protected $fillable = [
 		'status',
 		'email',
+		'name',
 		'language_id',
+		'product_id',
 		'phone',
-		'expert_id',
 		'date',
-		'content'
+		'message'
 	];
 }

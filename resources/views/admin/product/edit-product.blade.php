@@ -151,15 +151,15 @@
                         <div class="form-group">
                             <label class="col-md-12 col-sm-3 col-xs-12" for="first-name">Status</label>
                             <div class="col-md-12 col-sm-6 col-xs-12">
-                            <select name="status" class="form-control col-md-7 col-xs-12">
-                                @if($product->status == 1)
-                                    <option value="0">Unapproved</option>
-                                    <option value="1" selected>Approved</option>
-                                @else
-                                    <option value="0" selected>Unapproved</option>
-                                    <option value="1">Approved</option>
-                                @endif
-                            </select>
+                                <select name="status" class="form-control col-md-7 col-xs-12">
+                                    @if($product->status == 1)
+                                        <option value="0">Waiting</option>
+                                        <option value="1" selected>Approved</option>
+                                    @else
+                                        <option value="0" selected>Waiting</option>
+                                        <option value="1">Approved</option>
+                                    @endif
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
