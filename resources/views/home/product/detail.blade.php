@@ -33,7 +33,7 @@
                         <div class="div-detail">
                             <div class="col-md-6 col-sm-6 product-content">
                                 <p>{!! $product->product_content !!}</p>
-                                <div class="row" style="text-align: center; padding: 10px 20px">
+                                <div class="row" style="padding: 10px 20px">
                                     <div class="fb-send" data-href="{{url('')}}/{{$id}}-{{$slug}}/{{Session::get('locale')}}-{{$id_sp}}-{{$slug_sp}}.html"></div>
                                     <div class="fb-like" data-href="{{url('')}}/{{$id}}-{{$slug}}/{{Session::get('locale')}}-{{$id_sp}}-{{$slug_sp}}.html" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
 

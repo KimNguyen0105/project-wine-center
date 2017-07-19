@@ -53,6 +53,7 @@
                     </li>
                     <li><a href="{{URL::asset('')}}admin/1-address-management"><i class="fa fa-bug"></i> Address management</a>
                     </li>
+                    <li><a href="{{URL::asset('')}}admin/1-labels-management"><i class="fa fa-bug"></i> Labels management</a>
                     <li><a href="{{URL::asset('')}}admin/resize-image"><i class="fa fa-bug"></i> Resize image example</a>
                     </li>
                 </ul>

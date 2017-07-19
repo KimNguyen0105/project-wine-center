@@ -133,3 +133,7 @@ Route::get('/admin/address/edit-address-{id}','Admin\AddressController@getEditAd
 Route::post('/admin/address/edit-address-{id}','Admin\AddressController@postEditAddress')->middleware('not.login');
 Route::get('/admin/address/delete-address-{id}','Admin\AddressController@getDeleteAddress')->middleware('not.login');
 Route::post('/admin/address/delete-address-{id}','Admin\AddressController@postDeleteAddress')->middleware('not.login');
+
+//Labels
+Route::get('/admin/{id}-labels-management','Admin\LabelsController@getLabelsAdmin')->middleware('not.login');
+Route::get('/admin/1/save-label','Admin\LabelsController@getLabelsAdmin')->middleware('not.login');

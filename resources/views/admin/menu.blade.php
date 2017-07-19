@@ -52,9 +52,6 @@
                                     <a href="{{URL::asset('')}}admin/edit-menu-{{$item->id}}"
                                        class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-pencil"></span>
                                         Edit</a>
-                                    <a href="{{URL::asset('')}}admin/delete-menu-{{$item->id}}"
-                                       class="btn btn-xs btn-danger deletelink"><span
-                                                class="glyphicon glyphicon-trash"></span> Delete</a>
                                 </td>
                             </tr>
                         @endforeach
