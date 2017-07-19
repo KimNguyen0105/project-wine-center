@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
 
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <script src="{{asset('js/jquery.min.js')}}" type="text/javascript" charset="utf-8"></script>
@@ -28,7 +27,8 @@
     @include('home.layouts.header')
     {{--@include('layouts.menu')--}}
     @yield('Content')
-    @include('home.layouts.footer')
+    @include('home.layouts.footer_detail')
+
 </body>
 
 </html>

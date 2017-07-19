@@ -1,4 +1,19 @@
 <footer>
+    <section class="contatc-main">
+        <p class="p-phone" style="margin-bottom: 30px">{{$labels[13]->name}}</p>
+        @if($address !=null)
+            @foreach($address as $item)
+                <h5>{{$item->name}}: {!! $item->content !!}</h5>
+            @endforeach
+        @endif
+        <div class="phone">
+            @if($address !=null)
+                @foreach($address as $item)
+                    <p class="p-phone">{{$item->name}}: {{$item->phone}}</p>
+                @endforeach
+            @endif
+        </div>
+    </section>
     <section class="wine-footer">
         <h5>{{$labels[17]->name}}</h5>
         <p class="slogan">{!! $labels[18]->name !!}

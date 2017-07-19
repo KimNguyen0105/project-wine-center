@@ -15,7 +15,7 @@ use DB;
 
 class WineCenterController extends Controller
 {
-    public function getWineCenter($id)
+    public function getWineCenterAdmin($id)
     {
         $language = HbbLanguage::get();
         $abouts = DB::table('hbb_wine_center')->join('hbb_wine_center_translation','hbb_wine_center.id','=','hbb_wine_center_translation.wine_center_id')

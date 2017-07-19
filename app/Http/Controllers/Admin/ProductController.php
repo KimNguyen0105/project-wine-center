@@ -17,7 +17,7 @@ use Image;
 
 class ProductController extends Controller
 {
-    public function getProduct($id)
+    public function getProductAdmin($id)
     {
         $langguage = HbbLanguage::get();
         $products = DB::table('hbb_products')

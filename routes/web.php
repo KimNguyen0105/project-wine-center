@@ -12,6 +12,22 @@
 */
 
 Route::get('/', 'Controller@getHome');
+Route::get('/language-{id}', 'Controller@setLanguage');
+Route::post('/subscribe', 'Controller@Subscribe');
+
+Route::get('/{slug_menu}/{slug}/brand-{id}/filter-product.html', 'Controller@getBrandProduct');
+Route::get('/{slug_menu}/{slug}/collection-{id}/filter-product.html', 'Controller@getCollectionProduct');
+Route::get('/{slug_menu}/price-{id}/filter-product.html', 'Controller@getPriceProduct');
+
+
+Route::post('/submit-contact', 'Controller@SubmitContact');
+Route::post('/subscribe-wine', 'Controller@SubscribeWine');
+Route::get('/{slug}/search-product.html', 'Controller@SearchProduct');
+
+Route::get('/{lang}-{id}-{slug}.html', 'Controller@getMenuPage');
+Route::get('/{id_menu}-{slug_menu}/{lang}-{id}-{slug}.html', 'Controller@getDetail');
+Route::get('/{slug}/{id}-{id_menu}/{slug_menu}.html', 'Controller@getWineCenter');
+Route::get('/{id_menu}-{slug_menu}/{id}/{slug}.html', 'Controller@getProduct');
 //================== Admin routes ================================
 Route::get('/admin','Admin\AdminController@Home')->middleware('not.login');
 Route::get('/admin/log-in','Admin\AccountController@getLogin');
@@ -53,7 +69,7 @@ Route::get('admin/delete-slider-{id}','Admin\SliderController@getDeleteSlider')-
 Route::post('admin/delete-slider-{id}','Admin\SliderController@postDeleteSlider')->middleware('not.login');
 
 //product managerment
-Route::get('/admin/{id}-product','Admin\ProductController@getProduct')->middleware('not.login');
+Route::get('/admin/{id}-product','Admin\ProductController@getProductAdmin')->middleware('not.login');
 Route::get('/admin/product/create-product','Admin\ProductController@getCreateProduct')->middleware('not.login');
 Route::post('/admin/product/create-product','Admin\ProductController@postCreateProduct')->middleware('not.login');
 Route::get('/admin/product/edit-product-{id}','Admin\ProductController@getEditProduct')->middleware('not.login');
@@ -103,7 +119,7 @@ Route::get('/admin/news/delete-news-{id}','Admin\NewsController@getDeleteNews')-
 Route::post('/admin/news/delete-news-{id}','Admin\NewsController@postDeleteNews')->middleware('not.login');
 
 //About management
-Route::get('/admin/{id}-wine-center','Admin\WineCenterController@getWineCenter')->middleware('not.login');
+Route::get('/admin/{id}-wine-center','Admin\WineCenterController@getWineCenterAdmin')->middleware('not.login');
 Route::get('/admin/wine-center/edit-wine-center-{id}','Admin\WineCenterController@getEditWineCenter')->middleware('not.login');
 Route::post('/admin/wine-center/edit-wine-center-{id}','Admin\WineCenterController@postEditWineCenter')->middleware('not.login');
 Route::get('/admin/wine-center/delete-wine-center-{id}','Admin\WineCenterController@getDeleteWineCenter')->middleware('not.login');

@@ -32,6 +32,18 @@ $(document).ready(function() {
             slidesToShow: 1,
             slidesToScroll: 1,
         });
+        $(".regular-other .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+        $(".product-image .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
     }
     else if(w<=768)
     {
@@ -64,6 +76,18 @@ $(document).ready(function() {
             infinite: true,
             slidesToShow: 2,
             slidesToScroll: 2,
+        });
+        $(".regular-other .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+        });
+        $(".product-image .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
         });
     }
     else if(w<=1040)
@@ -98,6 +122,18 @@ $(document).ready(function() {
             slidesToShow: 3,
             slidesToScroll: 3,
         });
+        $(".regular-other .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+        $(".product-image .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+        });
     }
     else
     {
@@ -129,7 +165,19 @@ $(document).ready(function() {
             dots: true,
             infinite: true,
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 3
+        });
+        $(".product-image .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+        $(".regular-other .slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4
         });
     }
 
