@@ -29,9 +29,14 @@ class AccountController extends Controller{
                 return redirect('/admin/log-in')->with('fail','Username or password wrong!  ');
             }
             else{
-                Session::put('username',$username);
-                Session::put('user_id',$user->id);
-                return redirect('/admin');
+                if($user->status == 0){
+                    return redirect('/admin/log-in')->with('fail','Your account were locked!  ');
+                } else {
+                    Session::put('username',$username);
+                    Session::put('user_id',$user->id);
+                    return redirect('/admin');
+                }
+
             }
         }
         else{
