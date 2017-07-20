@@ -60,9 +60,15 @@ $config['images'] = array(
         'large'  => array('width' => 800, 'height' => 600, 'quality' => 80)
     )
 );
+//resize image folder user
 if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/user/'){
     $config['Images']['maxWidth'] = 150;
     $config['Images']['maxHeight'] = 150;
+}
+//resize image folder slider
+if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/slider/'){
+    $config['Images']['maxWidth'] = 60;
+    $config['Images']['maxHeight'] = 60;
 }
 /*=================================== Backends ========================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_backends
@@ -91,14 +97,45 @@ $config['plugins'][] = 'Watermark';
 $config['defaultResourceTypes'] = '';
 
 $config['resourceTypes'][] = array(
-    'name'              => 'Images', // Single quotes not allowed.
-    'directory'         => 'images',
+    'name'              => 'Slider', // Single quotes not allowed.
+    'directory'         => 'images/slider',
     'maxSize'           => 0,
     'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
     'deniedExtensions'  => '',
     'backend'           => 'default'
 );
-
+$config['resourceTypes'][] = array(
+    'name'              => 'Product', // Single quotes not allowed.
+    'directory'         => 'images/products',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+$config['resourceTypes'][] = array(
+    'name'              => 'News', // Single quotes not allowed.
+    'directory'         => 'images/news',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+$config['resourceTypes'][] = array(
+    'name'              => 'Collection', // Single quotes not allowed.
+    'directory'         => 'images/collection',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+$config['resourceTypes'][] = array(
+    'name'              => 'User', // Single quotes not allowed.
+    'directory'         => 'images/users',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
 
 
 /*================================ Access Control =====================================*/

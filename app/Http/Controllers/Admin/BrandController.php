@@ -14,7 +14,7 @@ use App\Models\HbbBrandTranslation;
 
 class BrandController extends Controller
 {
-    public function getBrand($id)
+    public function getBrandAdmin($id)
     {
         $language = HbbLanguage::get();
         $brands = DB::table('hbb_brand')

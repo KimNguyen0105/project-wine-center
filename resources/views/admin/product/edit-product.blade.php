@@ -49,9 +49,9 @@
                                 <script>
                                     CKEDITOR.replace('product_content{{$product->language_id}}', {
                                         filebrowserBrowseUrl: '{{URL::asset('')}}ckfinder/ckfinder.html',
-                                        filebrowserImageBrowseUrl: '{{URL::asset('')}}ckfinder/ckfinder.html?type=Images',
+                                        filebrowserImageBrowseUrl: '{{URL::asset('')}}ckfinder/ckfinder.html?type=Product',
                                         filebrowserUploadUrl: '{{URL::asset('')}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-                                        filebrowserImageUploadUrl: '{{URL::asset('')}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
+                                        filebrowserImageUploadUrl: '{{URL::asset('')}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Product'
                                     });
 
                                 </script>

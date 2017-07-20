@@ -14,7 +14,7 @@ use Image;
 
 class CollectionController extends Controller
 {
-    public function getCollection($id)
+    public function getCollectionAdmin($id)
     {
         $language = HbbLanguage::get();
         $collections = DB::table('hbb_collection')

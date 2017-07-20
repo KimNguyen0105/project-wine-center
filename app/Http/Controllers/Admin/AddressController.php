@@ -14,7 +14,7 @@ use DB;
 
 class AddressController extends Controller
 {
-    public function getAddress($id)
+    public function getAddressAdmin($id)
     {
         $language = HbbLanguage::get();
         $address = DB::table('hbb_address')->join('hbb_address_translation', 'hbb_address.id', '=', 'hbb_address_translation.address_id')
