@@ -136,4 +136,4 @@ Route::post('/admin/address/delete-address-{id}','Admin\AddressController@postDe
 
 //Labels
 Route::get('/admin/{id}-labels-management','Admin\LabelsController@getLabelsAdmin')->middleware('not.login');
-Route::get('/admin/1/save-label','Admin\LabelsController@getLabelsAdmin')->middleware('not.login');
+Route::post('/admin/save-label','Admin\LabelsController@SaveLabelAdmin')->middleware('not.login');

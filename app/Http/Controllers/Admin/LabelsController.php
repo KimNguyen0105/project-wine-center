@@ -22,11 +22,22 @@ class LabelsController extends Controller
             ->join('hbb_label_translation','hbb_label.id','=','hbb_label_translation.label_id')
             ->where('hbb_label_translation.language_id',$id)
             ->orderBy('hbb_label_translation.label_name','asc')
-            ->select('hbb_label.*','hbb_label_translation.label_name')
+            ->select('hbb_label.*','hbb_label_translation.label_name','hbb_label_translation.id as id_')
             ->get();
         return view('admin.labels.home', [
             'language' => $language,
             'labels' => $labels
         ]);
+    }
+    public function SaveLabelAdmin(Request $request)
+    {
+        $id=$request->id;
+        $name=$request->get('label_' . $id);
+        DB::table('hbb_label_translation')
+            ->where('id',$id)
+            ->update([
+                'label_name' => $name,
+            ]);
+        return redirect('/admin/1-labels-management')->with('success', 'Updated successfully');
     }
 }

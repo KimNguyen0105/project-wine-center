@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wine Center</title>
+    <title>{{$config->seo_title}}</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     {{--<link rel="stylesheet" href="{{asset('css/styles.css')}}">--}}
-
+    <meta name="description" content="{{$config->seo_description}}"/>
+    <meta name="author"  content="{{$config->seo_author}}"/>
+    <meta name="keywords"  content="{{$config->seo_keyword}}"/>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
@@ -22,6 +24,7 @@
     <script src="{{asset('js/slick.js')}}" type="text/javascript" charset="utf-8"></script>
     <script src="{{asset('js/slick-custom.js')}}" type="text/javascript" charset="utf-8"></script>
     <script src="{{asset('js/jquery.validate.js')}}"></script>
+    {!! $config->google_analytic !!}
 </head>
 <body>
     @include('home.layouts.header')
