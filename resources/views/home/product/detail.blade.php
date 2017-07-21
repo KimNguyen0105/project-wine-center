@@ -36,12 +36,17 @@
                                 <div class="row" style="padding: 10px 20px">
                                     <div class="fb-send" data-href="{{url('')}}/{{$id}}-{{$slug}}/{{Session::get('locale')}}-{{$id_sp}}-{{$slug_sp}}.html"></div>
                                     <div class="fb-like" data-href="{{url('')}}/{{$id}}-{{$slug}}/{{Session::get('locale')}}-{{$id_sp}}-{{$slug_sp}}.html" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
-
                                     <div class="fb-share-button" data-href="{{url('')}}/{{$id}}-{{$slug}}/{{Session::get('locale')}}-{{$id_sp}}-{{$slug_sp}}.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Chia sẻ</a></div>
+                                    <!-- Place this tag in your head or just before your close body tag. -->
+                                    <!-- Place this tag in your head or just before your close body tag. -->
+                                    <!-- Place this tag in your head or just before your close body tag. -->
+                                    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-
+                                    <!-- Place this tag where you want the share button to render. -->
+                                    <div class="g-plus" data-action="share" data-href="{{url('')}}/{{$id}}-{{$slug}}/{{Session::get('locale')}}-{{$id_sp}}-{{$slug_sp}}.html"></div>
                                 </div>
                                 <a class="btn" onclick="ftGetSubscribeWine('{{$product->id}}')">{{$labels[12]->name}}</a>
+
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <img id="imageDetail" src="{{asset('images/products')}}/{{$product->avatar}}" class="img-responsive img-detail">
@@ -68,6 +73,9 @@
                             </div>
                         </div>
 
+                    </div>
+                    <div class="col-md-12 col-md-offset-1" style="padding: 10px 20px">
+                        <div class="fb-comments" data-href="{{url('')}}/{{$id}}-{{$slug}}/{{Session::get('locale')}}-{{$id_sp}}-{{$slug_sp}}.html" data-numposts="5"></div>
                     </div>
                 </div>
             </div>

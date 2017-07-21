@@ -501,6 +501,7 @@ class Controller extends BaseController
                     ->where('hbb_menu_news_translation.language_id',Session::get('locale'))
                     ->select('hbb_menu_news.id','hbb_menu_news_translation.menu_news_name as name','hbb_menu_news_translation.slug')
                     ->get();
+                DB::table('hbb_news')->where('id',$id)->increment('reviews');
                 $news= DB::table('hbb_news')
                     ->join('hbb_news_translation','hbb_news.id','=','hbb_news_translation.news_id')
                     ->join('hbb_menu_news_translation','hbb_news.menu_news_id','=','hbb_menu_news_translation.menu_news_id')
@@ -660,7 +661,7 @@ class Controller extends BaseController
                 ->where('hbb_wine_center_translation.language_id',Session::get('locale'))
                 ->select('hbb_wine_center.id','hbb_wine_center_translation.wine_center_name as name','hbb_wine_center_translation.slug')
                 ->get();
-            if($id_menu==1||$id_menu==2||$id_menu==3)
+            if($id_menu!=5)
             {
                 $about=DB::table('hbb_wine_center')
                     ->join('hbb_wine_center_translation','hbb_wine_center.id','=','hbb_wine_center_translation.wine_center_id')
@@ -671,9 +672,10 @@ class Controller extends BaseController
                 return view('home.wine-center.detail')->with(['language'=>$languages,'menu'=>$menu,'config'=>$config,
                     'slug'=>$slug,'id'=>$id,'labels'=>$labels,'brands'=>$brands,
                     'address'=>$address,'collections'=>$collections,'about'=>$about,
-                    'menu_wine'=>$menu_wine,'active'=>$active,'active_menu'=>$id_menu,'search'=>$search]);
+                    'menu_wine'=>$menu_wine,'active'=>$active,'active_menu'=>$id_menu,'search'=>$search,
+                    'id_sp'=>$id_menu,'slug_sp'=>$slug_menu]);
             }
-            else if($id_menu==5)
+            else
             {
                 $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 $pin =$characters[rand(2, strlen($characters) - 1)]
@@ -691,10 +693,6 @@ class Controller extends BaseController
                     'slug'=>$slug,'id'=>$id,'labels'=>$labels,'brands'=>$brands,
                     'address'=>$address,'collections'=>$collections,'menu_wine'=>$menu_wine,'active'=>$active,
                     'address_map'=>$address_map,'active_menu'=>$id_menu,'pin'=>$pin,'search'=>$search]);
-            }
-            else if($id_menu==4)
-            {
-
             }
         }
         catch (\Exception $e)

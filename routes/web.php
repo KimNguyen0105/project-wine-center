@@ -35,6 +35,7 @@ Route::get('/admin/log-out','Admin\AccountController@Logout');
 Route::post('/admin/log-in','Admin\AccountController@postLogin');
 Route::group(['prefix'=>'admin'],function (){
 //system config
+
     Route::get('/system-config','Admin\AdminController@getSystemConfig')->middleware('not.login');
     Route::post('/admin/system-config','Admin\AdminController@updateSystemConfig')->middleware('not.login');
 
@@ -164,7 +165,6 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('/user/profile-{id}','Admin\UserController@Profile')->middleware('not.login');
     Route::post('/user/profile-{id}','Admin\UserController@UpdateProfile')->middleware('not.login');
 
-
-
 });
+
 

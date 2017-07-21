@@ -1,5 +1,12 @@
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.menu-home-header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
 }
 .main-header .navbar{
     margin-bottom: 0px;
@@ -161,6 +168,7 @@ body {
 }
 #myCarousel .carousel-inner img{
     width: 100%;
+    height: 600px;
 }
 #myBanner .col-md-4{
     padding-right: 0px;
@@ -213,10 +221,7 @@ figure.effect-bubba h2{
 }
 figure.effect-bubba a{
     background-color: transparent;
-
-
     padding: 10px 15px;
-    text-transform: uppercase;
     color: #fff;
 }
 .banner-header figure.effect-bubba a{
@@ -239,6 +244,7 @@ figure.effect-bubba a:hover{
 .product img{
     width: 100%;
     height: 340px;
+    background-color: #fff;
     border: 1px #565353 solid;
 }
 .product .product-image{
@@ -374,6 +380,12 @@ figure.effect-bubba a:hover{
 #myModal input[type=submit]:hover{
     color: #d0b68b;
 }
+#myModal .modal-body a{
+    color: #1999ce;
+}
+#myModal .modal-footer a{
+    color: #fff;
+}
 .wine-contact select{
     height: 50px;
     border: 0px;
@@ -423,6 +435,7 @@ figure.effect-bubba a:hover{
     color: #fff;
     margin-bottom: 15px;
     padding: 0px 15px;
+    font-weight: 400;
 }
 .contatc-main .p-phone{
     font-size: 14px;
@@ -499,6 +512,7 @@ figure.effect-bubba a:hover{
 .wine-footer p.slogan{
     color: #fff;
     font-size: 20px;
+    line-height: 40px;
 }
 .wine-footer ul{
     padding-top: 50px;
@@ -836,6 +850,9 @@ figure.effect-bubba a:hover{
 
 }
 @media (max-width: 768px) {
+    #myCarousel .carousel-inner img{
+        height: 500px;
+    }
     .slick-prev {
         left: -12px;
     }
@@ -867,8 +884,14 @@ figure.effect-bubba a:hover{
     .subscribe form input[type="email"] {
         width: 300px;
     }
+    #myCarousel .carousel-inner img{
+        height: 400px;
+    }
 }
 @media (max-width: 430px) {
+    #myCarousel .carousel-inner img{
+        height: 300px;
+    }
     .subscribe form input[type="email"] {
         width: 250px;
     }
@@ -883,4 +906,5 @@ figure.effect-bubba a:hover{
     .subscribe form input[type="submit"] {
         padding: 0px 10px;
     }
+
 }

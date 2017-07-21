@@ -42,8 +42,10 @@
                         @foreach($labels as $item)
                             <tr>
                                 <form action="{{url('/admin/save-label')}}" method="post">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="hidden" name="id" value="{{$item->id_}}">
                                     <td>{{$loop->iteration}}</td>
-                                    <td><textarea class="form-control" name="label_"{{$item->id}} rows="3">{{$item->label_name}}</textarea></td>
+                                    <td><textarea class="form-control" name="label_{{$item->id_}}" rows="3">{{$item->label_name}}</textarea></td>
                                     <td><input type="submit" class="btn btn-primary" value="Save"></td>
                                 </form>
                             </tr>

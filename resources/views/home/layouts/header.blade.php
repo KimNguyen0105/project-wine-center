@@ -7,7 +7,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 <header class="main-header">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default menu-home-header">
         <div class="navbar-header">
             {{--<a class="menu-header"><i class="fa fa-bars" aria-hidden="true"></i></a>--}}
             <div class="dropdown menu-search">
