@@ -52,12 +52,12 @@
                                        class="btn btn-xs btn-primary editlink"><span
                                                 class="glyphicon glyphicon-pencil"></span>
                                         Edit</a>
-                                    @if($loop->count > 2)
+                                    @if($loop->count > 3)
                                         <a href="{{URL::asset('')}}admin/user/delete-user-{{$user->id}}"
                                            class="btn btn-xs btn-danger deletelink"><span
                                                     class="glyphicon glyphicon-trash"></span> Delete</a>
                                     @else
-                                        <i>Default 2 users, can't delete</i>
+                                        <i>Default 3 users, can't delete</i>
                                     @endif
                                 </td>
                             </tr>

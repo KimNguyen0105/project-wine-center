@@ -1,5 +1,6 @@
 @extends('admin.layout.master')
 @section('content')
+
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="dashboard_graph">
@@ -52,6 +53,15 @@
 
                                 </script>
                             @endforeach
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <label class="col-md-12 col-sm-3 col-xs-12" for="first-name">Product Image</label>
+                                    <div class="col-md-12 col-sm-9 col-xs-12 text-left">
+
+                                        <input id="input-id" type="file" name="imgDetail[]" class="file" multiple data-preview-file-type="text">
+
+                                    </div>
+                                </div>
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -151,6 +161,9 @@
 @section('scripts')
     <script src="{{URL::asset('')}}ckfinder/ckfinder.js"></script>
     <script>
+        $(function () {
+            $("#input-id").fileinput();
+        });
         $('#btnSelectImage').on('click', function (e) {
             e.preventDefault();
             CKFinder.modal({
@@ -175,7 +188,10 @@
                     });
                 }
             });
-        })
+        });
+
+
+
     </script>
 
 

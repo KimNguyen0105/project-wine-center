@@ -6,7 +6,7 @@
 
                 <div class="row x_title">
                     <div class="col-md-6">
-                        <h3>New User
+                        <h3>User Profile
                             {{--<small>Graph title sub-title</small>--}}
                         </h3>
                     </div>
@@ -20,7 +20,7 @@
                 @endif
                 <div class="col-md-12">
 
-                    <form id="demo-form2" data-parsley-validate action="{{URL::asset('')}}admin/user/create-user"
+                    <form id="demo-form2" data-parsley-validate action="{{URL::asset('')}}admin/user/profile-{{$users->id}}"
                           method="post" class="form-horizontal form-label-left">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
@@ -28,7 +28,7 @@
                                         class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="imgAvatar" name="imgAvatar" value="{{$users->avatar}}"
+                                <input type="text" id="avatar" name="avatar" value="{{$users->avatar}}"
                                        class="form-control col-md-7 col-xs-12">
                                 <img src="{{URL::asset('')}}images/users/{{$users->avatar}}" class="img-responsive" id="blah" style="width: 30%">
                                 <a href="#" style="margin: -34px 0px;position: relative;" class="btn btn-info pull-right" id="btnSelectImage">
@@ -117,14 +117,14 @@
                 onInit: function (finder) {
                     finder.on('files:choose', function (evt) {
                         var file = evt.data.files.first();
-                        var output = document.getElementById('imgAvatar');
+                        var output = document.getElementById('avatar');
                         output.value = (file.get('name'));
                         var blah = document.getElementById('blah');
                         blah.src = file.getUrl();
                     });
 
                     finder.on('file:choose:resizedImage', function (evt) {
-                        var output = document.getElementById('imgAvatar');
+                        var output = document.getElementById('avatar');
                         output.value = evt.data.file.get('name');
                         var blah = document.getElementById('blah');
                         blah.src = evt.data.resizedUrl();

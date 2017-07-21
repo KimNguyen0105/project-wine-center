@@ -56,9 +56,26 @@
 
                                 </script>
                                 @endforeach
-
-
-
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <label class="col-md-12 col-sm-3 col-xs-12" for="first-name">Product Image</label>
+                                <div class="col-md-12 col-sm-9 col-xs-12 text-left">
+                                    <input id="input-id" type="file" name="imgDetail[]" class="file" multiple data-preview-file-type="text" value="">
+                                </div>
+                            </div>
+                            @if($products_image !=null)
+                                <div class="col-md-12" style="padding-bottom: 20px">
+                                    @foreach ($products_image as $row)
+                                        <div class="col-md-3 col-xs-6" style="padding: 10px">
+                                            <a href="{{URL::asset('')}}admin/product/remove-product-image-{{$row->id}}" onclick="confirm('Are you sure you want to delete')" style="position: absolute;float: right" data-method="post"
+                                               class="btn btn-xs btn-danger">
+                                                <i class="fa fa-trash" title="Delete"></i>
+                                            </a>
+                                            <img src="{{asset('images/products')}}/{{$row->link}}" class="img-responsive" style="width: 100%; height: 200px">
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -66,6 +83,7 @@
                                     <button type="submit" class="btn btn-success">Save</button>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
@@ -187,6 +205,9 @@
 @endsection
 
 <script>
+    $(function () {
+        $("#input-id").fileinput();
+    });
     $('#btnSelectImage').on('click', function (e) {
         e.preventDefault();
         CKFinder.modal( {

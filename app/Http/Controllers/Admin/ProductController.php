@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Models\HbbUser;
 use App\Models\HbbLanguage;
 use App\Models\HbbProduct;
+use App\Models\HbbProductImage;
 use App\Models\HbbProductsTranslation;
 use App\Models\HbbCollectionTranslation;
 use DB;
@@ -63,7 +64,7 @@ class ProductController extends Controller
         try {
             $language = HbbLanguage::get();
             $products = new HbbProduct();
-            if($request->get('imgAvatar') != null){
+            if ($request->get('imgAvatar') != null) {
                 $products->avatar = $request->get('imgAvatar');
             } else {
                 $products->avatar = 'default.png';
@@ -76,7 +77,24 @@ class ProductController extends Controller
             $products->updated_at = Carbon::now();
             $products->created_at = Carbon::now();
             $products->status = 1;
-            $products->save();
+            if ($products->save()) {
+                if ($request->hasFile('imgDetail')) {
+                    $file_ary = $request->file('imgDetail');
+                    $i = 1;
+                    foreach ($file_ary as $file) {
+                        $filename = $i . time() . '.' . $file->getClientOriginalExtension();
+                        $path = public_path('images/products/' . $filename);
+                        Image::make($file->getRealPath())->resize(300, 200)->save($path);
+                        $products_image = new HbbProductImage();
+                        $products_image->product_id = $products->id;
+                        $products_image->link = $filename;
+                        $products_image->status = 1;
+                        $products_image->save();
+                        $i++;
+                    }
+                }
+            }
+
             foreach ($language as $lang) {
                 DB::table('hbb_products_translation')->insert([
                     'language_id' => $lang->id,
@@ -116,13 +134,18 @@ class ProductController extends Controller
             ->where('hbb_products.id', $id)
             ->select('hbb_products.avatar', 'hbb_products.collection_id', 'hbb_products.status', 'hbb_products.price', 'hbb_products.brand_id', 'hbb_products.country_id', 'hbb_products_translation.*')
             ->get();
+        $products_image = DB::table('hbb_product_image')->join('hbb_products', 'hbb_product_image.product_id', '=', 'hbb_products.id')
+            ->where('hbb_product_image.product_id', $id)
+            ->select('hbb_product_image.id', 'hbb_product_image.link')
+            ->get();
         return view('admin.product.edit-product', [
             'language' => $language,
             'id' => $id,
             'collections' => $collections,
             'countrys' => $countrys,
             'brands' => $brands,
-            'products' => $products
+            'products' => $products,
+            'products_image' => $products_image
         ]);
     }
 
@@ -139,7 +162,23 @@ class ProductController extends Controller
             $products->updated_at = Carbon::now();
             $products->created_at = Carbon::now();
             $products->status = $request->get('status');
-            $products->save();
+            if ($products->save()) {
+                if ($request->hasFile('imgDetail')) {
+                    $file_ary = $request->file('imgDetail');
+                    $i = 1;
+                    foreach ($file_ary as $file) {
+                        $filename = $i . time() . '.' . $file->getClientOriginalExtension();
+                        $path = public_path('images/products/' . $filename);
+                        Image::make($file->getRealPath())->resize(300, 200)->save($path);
+                        $products_image = new HbbProductImage();
+                        $products_image->product_id = $products->id;
+                        $products_image->link = $filename;
+                        $products_image->status = 1;
+                        $products_image->save();
+                        $i++;
+                    }
+                }
+            }
             foreach ($language as $lang) {
                 DB::table('hbb_products_translation')
                     ->where('product_id', $id)
@@ -155,15 +194,34 @@ class ProductController extends Controller
             dd($err);
         }
     }
+
     public function getDeleteProduct($id)
     {
-        return view('/admin/product/delete-product',[
-            'id'=>$id,
+        return view('/admin/product/delete-product', [
+            'id' => $id,
         ]);
     }
+
     public function postDeleteProduct($id)
     {
-        HbbProduct::where('id',$id)->delete();
-        return redirect('admin/1-product')->with('success','Deleted successfully');
+        HbbProduct::where('id', $id)->delete();
+        return redirect('admin/1-product')->with('success', 'Deleted successfully');
+    }
+
+    public function RemoveImage($id_image)
+    {
+        $products = HbbProductImage::find($id_image);
+        if (file_exists('images/products/' . $products->link)) {
+            unlink('images/products/' . $products->link);
+        }
+        $product_images = HbbProductImage::where('id', $id_image)->delete();
+        if ($product_images == 1) {
+            return redirect()->back()->with('success', 'Deleted Success!');
+
+        } else {
+            return redirect()->back()->with('fail', 'Deleted Fail!');
+        }
+
+
     }
 }

@@ -36,7 +36,6 @@ class AccountController extends Controller{
                     Session::put('user_id',$user->id);
                     return redirect('/admin');
                 }
-
             }
         }
         else{
@@ -49,4 +48,5 @@ class AccountController extends Controller{
         $request->session()->flush();
         return redirect('/admin/log-in');
     }
+
 }

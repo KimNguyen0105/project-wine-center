@@ -186,4 +186,5 @@ class AdminController extends Controller
         }
         return redirect('/admin/1-menu-management')->with('success', 'Update successfully');
     }
+
 }

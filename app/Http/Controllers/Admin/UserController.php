@@ -107,7 +107,23 @@ class UserController extends Controller
         } else {
             return redirect()->back();
         }
-
-
     }
+    public function UpdateProfile(Request $request,$id)
+    {
+        $users = $request->all();
+        HbbUser::find($id)->update($users);
+        return redirect()->back()->with('success','Updated your profile successfully');
+    }
+    public static function getPermissionUserById()
+    {
+        $user_permission = DB::table('hbb_user_permission')
+            ->join('hbb_permission','hbb_user_permission.permission_id','=','hbb_permission.id')
+            ->where('hbb_user_permission.user_id',Session::get('user_id'))
+            ->get();
+        //dd($user_permission);
+        return view('admin.permission-user',[
+            'user_permission' => $user_permission
+        ]);
+    }
+
 }

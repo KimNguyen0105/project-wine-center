@@ -17,6 +17,10 @@
     <link href="{{URL::asset('')}}css/nprogress.css" rel="stylesheet">
     {{--datatable--}}
     <link href="{{URL::asset('')}}css/jquery.dataTables.min.css" rel="stylesheet">
+    {{--file input--}}
+    <link rel="stylesheet" href="{{asset('fileinput/css/fileinput.min.css')}}">
+
+
 {{--<!-- iCheck -->--}}
 {{--<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">--}}
 
@@ -64,6 +68,7 @@
 <!-- Bootstrap -->
 <script src="{{URL::asset('')}}js/bootstrap.min.js"></script>
 <!-- FastClick -->
+{{--jQuery validate--}}
 
 <!-- Custom Theme Scripts -->
 <script src="{{URL::asset('')}}js/custom.min.js"></script>
@@ -72,6 +77,7 @@
 <script src="{{URL::asset('')}}js/dataTables.bootstrap.min.js"></script>
 <script src="{{URL::asset('')}}js/jquery.dataTables.min.js"></script>
 {{--<script src="{{URL::asset('')}}ckeditor/ckeditor.js"></script>--}}
+<script src="{{asset('')}}fileinput/js/fileinput.min.js"></script>
 <script>
     $(".language_tab li:first").addClass("active");
     $(".tab-content .tab-pane:first").addClass("in");
