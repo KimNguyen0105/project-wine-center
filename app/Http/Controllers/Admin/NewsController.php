@@ -55,6 +55,7 @@ class NewsController extends Controller
             $news->updated_at = Carbon::now();
             $news->created_at = Carbon::now();
             $news->status = 1;
+            $news->reviews = 0;
             $news->save();
             foreach ($language as $lang) {
                 DB::table('hbb_news_translation')->insert([

@@ -6,7 +6,6 @@ use App\Models\HbbLanguage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
-use App\Models\HbbAddress;
 use App\Models\HbbSubscribe;
 use Carbon\Carbon;
 use Image;
@@ -30,5 +29,21 @@ class SubscribeController extends Controller
             'id' => $id
         ]);
     }
-
+    public function postEditSubscribe(Request $request,$id)
+    {
+        $subscribes = $request->all();
+        HbbSubscribe::find($id)->update($subscribes);
+        return redirect('/admin/subscribe-management')->with('success','Updated successfully');
+    }
+    public function getDeleteSubscribe($id)
+    {
+        return view('admin.subscribe.delete-subscribe',[
+            'id' => $id
+        ]);
+    }
+    public function postDeleteSubscribe($id)
+    {
+        HbbSubscribe::where('id',$id)->delete();
+        return redirect('admin/subscribe-management')->with('success','Deleted successully');
+    }
 }

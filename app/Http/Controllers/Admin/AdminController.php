@@ -97,8 +97,6 @@ class AdminController extends Controller
             HbbLanguage::where('id', $id)->delete();
             return redirect('/admin/system-language');
         }
-
-
     }
 
     public function getMenuAdmin($id)

@@ -11,7 +11,7 @@
 
                         <div class="form-group">
                             <label>Email</label>
-                            <input class="form-control" type="text" value="{{$subscribes->email}}" name="email" required/>
+                            <input class="form-control" type="text" value="{{$subscribes->email}}" name="email" disabled required/>
 
                         </div>
                         <div class="form-group">

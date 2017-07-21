@@ -54,14 +54,20 @@
                     <li><a href="{{URL::asset('')}}admin/1-address-management"><i class="fa fa-bug"></i> Address management</a>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/1-labels-management"><i class="fa fa-bug"></i> Labels management</a>
-                    <li><a href="{{URL::asset('')}}admin/subscribe-management"><i class="fa fa-bug"></i> Subscribe management</a>
-                    <li><a href="{{URL::asset('')}}admin/resize-image"><i class="fa fa-bug"></i> Resize image example</a>
+                    <li><a><i class="fa fa-table"></i>Subscribe management<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{URL::asset('')}}admin/subscribe-management">Subscribe</a></li>
+                            <li><a href="{{URL::asset('')}}admin/subscribe-wine-management">Subscribe Wine</a></li>
+                        </ul>
                     </li>
+                    <li><a href="{{URL::asset('')}}admin/resize-image"><i class="fa fa-bug"></i> Resize image example</a></li>
+
                 </ul>
             </div>
             <div class="menu_section">
                 <h3>System config</h3>
                 <ul class="nav side-menu">
+                    <li><a href="{{URL::asset('')}}admin/user-management"><i class="fa fa-bug"></i> System user</a></li>
                     <li><a href="{{URL::asset('')}}admin/system-config"><i class="fa fa-bug"></i> System information</a>
                     </li>
                     <li><a href="{{URL::asset('')}}admin/system-language"><i class="fa fa-windows"></i> System language</a>

@@ -6,7 +6,7 @@
                 <h3>Are you sure you want to delete?</h3>
                 <div>
 
-                    <form action="{{URL::asset('')}}admin/subscribe/delete-subscribe-{{$id}}" method="post" enctype="multipart/form-data">
+                    <form action="{{URL::asset('')}}admin/subscribe-wine/delete-subscribe-wine-{{$id}}" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-actions no-color">
                             <input type="submit" value="Delete" class="btn btn-danger"/>

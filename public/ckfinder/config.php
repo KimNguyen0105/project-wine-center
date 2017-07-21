@@ -62,8 +62,8 @@ $config['images'] = array(
 );
 //resize image folder user
 if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/user/'){
-    $config['Images']['maxWidth'] = 150;
-    $config['Images']['maxHeight'] = 150;
+    $config['Images']['maxWidth'] = 60;
+    $config['Images']['maxHeight'] = 60;
 }
 //resize image folder slider
 if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/slider/'){

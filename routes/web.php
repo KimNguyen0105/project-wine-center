@@ -142,4 +142,26 @@ Route::get('/admin/1/save-label','Admin\LabelsController@getLabelsAdmin')->middl
 //Subscribe management
 Route::get('/admin/subscribe-management','Admin\SubscribeController@getSubscribeAdmin')->middleware('not.login');
 Route::get('/admin/subscribe/edit-subscribe-{id}','Admin\SubscribeController@getEditSubscribe')->middleware('not.login');
+<<<<<<< HEAD
 
+=======
+Route::post('/admin/subscribe/edit-subscribe-{id}','Admin\SubscribeController@postEditSubscribe')->middleware('not.login');
+Route::get('/admin/subscribe/delete-subscribe-{id}','Admin\SubscribeController@getDeleteSubscribe')->middleware('not.login');
+Route::post('/admin/subscribe/delete-subscribe-{id}','Admin\SubscribeController@postDeleteSubscribe')->middleware('not.login');
+//Subscribe Wine management
+Route::get('/admin/subscribe-wine-management','Admin\SubscribeWineController@getSubscribeWineAdmin')->middleware('not.login');
+Route::get('/admin/subscribe-wine/edit-subscribe-wine-{id}','Admin\SubscribeWineController@getEditSubscribeWine')->middleware('not.login');
+Route::post('/admin/subscribe-wine/edit-subscribe-wine-{id}','Admin\SubscribeWineController@postEditSubscribeWine')->middleware('not.login');
+Route::get('/admin/subscribe-wine/delete-subscribe-wine-{id}','Admin\SubscribeWineController@getDeleteSubscribeWine')->middleware('not.login');
+Route::post('/admin/subscribe-wine/delete-subscribe-wine-{id}','Admin\SubscribeWineController@postDeleteSubscribeWine')->middleware('not.login');
+
+//User management
+Route::get('/admin/user-management','Admin\UserController@Index')->middleware('not.login');
+Route::get('/admin/user/create-user','Admin\UserController@CreateUser')->middleware('not.login');
+Route::post('/admin/user/create-user','Admin\UserController@StoredUser')->middleware('not.login');
+Route::get('/admin/user/edit-user-{id}','Admin\UserController@EditUser')->middleware('not.login');
+Route::post('/admin/user/edit-user-{id}','Admin\UserController@UpdateUser')->middleware('not.login');
+Route::get('/admin/user/delete-user-{id}','Admin\UserController@DeleteUser')->middleware('not.login');
+Route::post('/admin/user/delete-user-{id}','Admin\UserController@RemoveUser')->middleware('not.login');
+Route::get('/admin/user/profile-{id}','Admin\UserController@Profile')->middleware('not.login');
+>>>>>>> 066a255c4c03c0ab9c449fd63c31484a6ea9db12

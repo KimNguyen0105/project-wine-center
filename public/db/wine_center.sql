@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 17, 2017 at 05:28 PM
+-- Generation Time: Jul 20, 2017 at 05:33 PM
 -- Server version: 10.0.31-MariaDB
 -- PHP Version: 5.6.31
 
@@ -40,9 +40,9 @@ CREATE TABLE `hbb_address` (
 --
 
 INSERT INTO `hbb_address` (`id`, `created_at`, `updated_at`, `status`, `sitemap`, `phone`) VALUES
-(1, '2017-07-17 03:57:29', '2017-07-13 03:27:22', 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.427256457597!2d105.83442831450526!3d21.05559098598386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aa5336ecba0d%3A0x90ccbc1c39bba25!2zMjQwIE5naGkgVMOgbSwgWcOqbiBQaOG7pSwgVMOieSBI4buTLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1500263813829', '0911 848 898'),
+(1, '2017-07-20 02:20:18', '2017-07-19 19:21:13', 0, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.427256457597!2d105.83442831450526!3d21.05559098598386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aa5336ecba0d%3A0x90ccbc1c39bba25!2zMjQwIE5naGkgVMOgbSwgWcOqbiBQaOG7pSwgVMOieSBI4buTLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1500263813829', '0911 848 898'),
 (2, '2017-07-13 09:25:31', '2017-07-13 02:00:00', 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5689577936696!2d106.68382201435035!3d10.767665492327469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1870f21afb%3A0x74cc68285b0b0dd9!2zMjQ0IEPhu5FuZyBRdeG7s25oLCBOZ3V54buFbiBDxrAgVHJpbmgsIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2sin!4v1499929541264', '0911 848 889'),
-(3, '2017-07-17 03:59:16', '2017-07-13 06:40:23', 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.2237207282897!2d106.69043931450146!3d20.86303098608832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7aeebe4c3c49%3A0xe82bbc98b9bbeca1!2zMTkgVHLhuqduIEtow6FuaCBExrAsIE3DoXkgVMahLCBOZ8O0IFF1eeG7gW4sIEjhuqNpIFBow7JuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1500263916128', '');
+(3, '2017-07-20 06:45:00', '2017-07-19 23:45:04', 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.2237207282897!2d106.69043931450146!3d20.86303098608832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7aeebe4c3c49%3A0xe82bbc98b9bbeca1!2zMTkgVHLhuqduIEtow6FuaCBExrAsIE3DoXkgVMahLCBOZ8O0IFF1eeG7gW4sIEjhuqNpIFBow7JuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1500263916128', '01696855433');
 
 -- --------------------------------------------------------
 
@@ -63,12 +63,14 @@ CREATE TABLE `hbb_address_translation` (
 --
 
 INSERT INTO `hbb_address_translation` (`id`, `address_id`, `language_id`, `address_name`, `address_content`) VALUES
-(1, 1, 1, 'Hà Nội', '240 Nghi Tàm, Hà Nội'),
-(2, 1, 2, 'Ha Noi', '240 Nghi Tàm, Hà Nội'),
+(1, 1, 1, 'Hà Nội', '<p>240 Nghi T&agrave;m, H&agrave; Nội</p>'),
+(2, 1, 2, 'Ha Noi', '<p>240 Nghi T&agrave;m, H&agrave; Nội</p>'),
 (3, 2, 1, 'TP Hồ Chí Minh', '244 Cống Quỳnh, Phạm Ngũ Lão, Quận 1, Tp HCM'),
 (4, 2, 2, 'Ho Chi Minh City', '244 Cống Quỳnh, Phạm Ngũ Lão, Quận 1, Tp HCM'),
-(5, 3, 1, 'Hải Phòng', '19 Trần Khánh Dư, Hải Phòng'),
-(6, 3, 2, 'Hai Phong', '19 Trần Khánh Dư, Hải Phòng');
+(5, 3, 1, 'Hải Phòng', '<p>19 Trần Kh&aacute;nh Dư, Hải Ph&ograve;ng</p>'),
+(6, 3, 2, 'Hai Phong', '<p>19 Trần Kh&aacute;nh Dư, Hải Ph&ograve;ng</p>'),
+(7, 5, 1, 'Ninh Thuận', '<p>asdasd</p>'),
+(8, 5, 2, 'Ninh Thuan', '<p>asdasd</p>');
 
 -- --------------------------------------------------------
 
@@ -89,7 +91,8 @@ CREATE TABLE `hbb_brand` (
 
 INSERT INTO `hbb_brand` (`id`, `created_at`, `updated_at`, `status`) VALUES
 (1, '2017-07-11 09:59:17', '2017-07-11 06:29:25', 1),
-(2, '2017-07-11 09:59:17', '2017-07-11 05:31:30', 1);
+(2, '2017-07-11 09:59:17', '2017-07-11 05:31:30', 1),
+(3, '2017-07-18 02:08:31', '2017-07-17 22:14:00', 1);
 
 -- --------------------------------------------------------
 
@@ -113,7 +116,11 @@ INSERT INTO `hbb_brand_translation` (`id`, `language_id`, `brand_id`, `brand_nam
 (1, 1, 1, 'Tanizzi', 'tanizzi'),
 (2, 2, 1, 'Tanizzi', 'tanizzi'),
 (3, 1, 2, 'Astoria', 'astoria'),
-(4, 2, 2, 'Astoria', 'astoria');
+(4, 2, 2, 'Astoria', 'astoria'),
+(5, 1, 3, 'Việt Nam', 'viet-nam'),
+(6, 2, 3, 'Viet Nam', 'viet-nam'),
+(7, 1, 7, 'thổ nhĩ ki', 'tho-nhi-ki'),
+(8, 2, 7, 'turkey', 'turkey');
 
 -- --------------------------------------------------------
 
@@ -145,11 +152,12 @@ INSERT INTO `hbb_collection` (`id`, `parrent_id`, `created_at`, `updated_at`, `s
 (8, 1, '2017-07-12 08:40:28', '2017-07-11 04:38:29', 1, 'red-wine.jpg'),
 (9, 5, '2017-07-12 09:13:34', '2017-07-11 04:38:29', 1, 'red-wine.jpg'),
 (10, 2, '2017-07-12 08:40:28', '2017-07-11 04:38:29', 1, 'red-wine.jpg'),
-(11, 5, '2017-07-17 07:28:56', '2017-07-17 08:35:00', 1, NULL),
+(11, 15, '2017-07-17 18:39:23', '2017-07-17 18:39:23', 1, 'default.jpg'),
 (12, 5, '2017-07-17 07:28:56', '2017-07-16 17:22:48', 1, NULL),
-(13, 0, '2017-07-16 19:28:40', '2017-07-16 19:28:40', 1, 'white-wine.jpg'),
-(14, 0, '2017-07-16 19:30:16', '2017-07-16 19:30:16', 1, 'white-wine.jpg'),
-(15, 0, '2017-07-16 19:46:42', '2017-07-16 19:46:42', 1, 'red-wine.jpg');
+(15, 5, '2017-07-18 01:48:35', '2017-07-17 18:48:32', 1, 'red-wine.jpg'),
+(16, 1, '2017-07-18 19:14:02', '2017-07-18 19:14:02', 1, 'collections.jpg'),
+(17, 5, '2017-07-18 19:15:30', '2017-07-18 19:15:30', 1, 'white-wine.jpg'),
+(18, 6, '2017-07-18 19:17:11', '2017-07-18 19:17:11', 1, 'default.jpg');
 
 -- --------------------------------------------------------
 
@@ -194,12 +202,14 @@ INSERT INTO `hbb_collection_translation` (`id`, `language_id`, `collection_id`, 
 (22, 2, 11, 'Rượu Vang Trắng Italy', 'ruou-vang-trang-italy'),
 (23, 1, 12, 'Rượu Vang Trắng New Zealand', 'ruou-vang-trang-new-zealand'),
 (24, 2, 12, 'Rượu Vang Trắng New Zealand', 'ruou-vang-trang-new-zealand'),
-(25, 1, 13, 'rượu việt nam', 'ruou-viet-nam'),
-(26, 2, 13, 'wine viet nam', 'wine-viet-nam'),
-(27, 1, 14, 'rượu việt nam', 'ruou-viet-nam'),
-(28, 2, 14, 'wine viet nam', 'wine-viet-nam'),
 (29, 1, 15, 'rượu đỏ', 'ruou-do'),
-(30, 2, 15, 'red wine', 'red-wine');
+(30, 2, 15, 'red wine', 'red-wine'),
+(31, 1, 16, 'Vang đỏ Chile', 'vang-do-chile'),
+(32, 2, 16, 'Red wines Chile', 'red-wines-chile'),
+(33, 1, 17, 'Vang trắng Chile', 'vang-trang-chile'),
+(34, 2, 17, 'White wines Chile', 'white-wines-chile'),
+(35, 1, 18, 'Vang ngọt Hungary', 'vang-ngot-hungary'),
+(36, 2, 18, 'Sparkling wines Hungary', 'sparkling-wines-hungary');
 
 -- --------------------------------------------------------
 
@@ -225,15 +235,21 @@ CREATE TABLE `hbb_comment` (
 
 CREATE TABLE `hbb_contact` (
   `id` int(11) NOT NULL,
-  `from_email` varchar(100) NOT NULL,
-  `phone_number` varchar(15) DEFAULT NULL,
-  `title` varchar(200) DEFAULT NULL,
-  `message` text NOT NULL,
-  `send_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `status` int(11) NOT NULL,
-  `from_id_address` varchar(20) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `message` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` tinyint(1) NOT NULL,
   `current_language` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hbb_contact`
+--
+
+INSERT INTO `hbb_contact` (`id`, `name`, `phone`, `email`, `message`, `created_at`, `status`, `current_language`) VALUES
+(1, 'kim123', '01696855433', 'thuykim0105@gmail.com', '231323', '2017-07-18 07:12:16', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -277,7 +293,9 @@ INSERT INTO `hbb_country_translation` (`id`, `language_id`, `country_id`, `count
 (1, 1, 1, 'Pháp'),
 (2, 2, 1, 'France'),
 (3, 1, 2, 'Mỹ'),
-(4, 2, 2, 'USA');
+(4, 2, 2, 'USA'),
+(5, 1, 3, 'việt nam n'),
+(6, 2, 3, 'viet nam');
 
 -- --------------------------------------------------------
 
@@ -331,7 +349,15 @@ INSERT INTO `hbb_label` (`id`, `created_at`, `update_at`) VALUES
 (33, '2017-07-17 09:10:08', '2017-07-17 04:29:30'),
 (34, '2017-07-17 09:10:08', '2017-07-17 02:23:40'),
 (35, '2017-07-17 09:15:21', '2017-07-17 02:28:00'),
-(36, '2017-07-17 09:15:21', '2017-07-17 04:33:37');
+(36, '2017-07-17 09:15:21', '2017-07-17 04:33:37'),
+(37, '2017-07-18 02:08:55', '2017-07-18 01:23:26'),
+(38, '2017-07-18 02:08:55', '2017-07-18 05:28:00'),
+(39, '2017-07-18 02:09:04', '2017-07-18 02:23:29'),
+(40, '2017-07-18 02:09:04', '2017-07-18 02:33:39'),
+(41, '2017-07-18 02:09:14', '2017-07-18 05:29:00'),
+(42, '2017-07-18 02:09:14', '2017-07-18 04:29:31'),
+(43, '2017-07-18 02:09:23', '2017-07-18 02:23:33'),
+(44, '2017-07-18 02:09:23', '2017-07-18 07:28:00');
 
 -- --------------------------------------------------------
 
@@ -422,7 +448,23 @@ INSERT INTO `hbb_label_translation` (`id`, `language_id`, `label_id`, `label_nam
 (69, 1, 35, 'Nhập mã'),
 (70, 2, 35, 'Enter key'),
 (71, 1, 36, 'Gửi'),
-(72, 2, 36, 'Submit');
+(72, 2, 36, 'Submit'),
+(73, 1, 37, 'Đăng ký thử rượu miễn phí'),
+(74, 2, 37, 'Dang ky thu ruou mien phi'),
+(75, 1, 38, 'Chọn chuyên gia'),
+(76, 2, 38, 'Chon chuyen gia'),
+(77, 1, 39, 'Chọn ngày giờ'),
+(78, 2, 39, 'Chon ngay gio'),
+(79, 1, 40, 'Hủy'),
+(80, 2, 40, 'Cancel'),
+(81, 1, 41, 'Yêu cầu khác'),
+(82, 2, 41, 'Yeu cau khac'),
+(83, 1, 42, 'Thông báo'),
+(84, 2, 42, 'Notification'),
+(85, 1, 43, 'Gửi thông tin thành công!'),
+(86, 2, 43, 'Send info success'),
+(87, 1, 44, 'Gửi thông tin thất bại!'),
+(88, 2, 44, 'Send info error!');
 
 -- --------------------------------------------------------
 
@@ -525,7 +567,9 @@ INSERT INTO `hbb_menu_news_translation` (`id`, `language_id`, `menu_news_id`, `m
 (9, 1, 5, 'Kể chuyện rượu vang', 'ke-chuyen-ruou-vang'),
 (10, 2, 5, 'Ke chuyen ruou vang', 'ke-chuyen-ruou-vang'),
 (11, 1, 6, 'Đất nước', 'dat-nuoc'),
-(12, 2, 6, 'Dat nuoc', 'dat-nuoc');
+(12, 2, 6, 'Dat nuoc', 'dat-nuoc'),
+(13, 1, 7, 'kiểm tra aaa', 'kiem-tra-aaa'),
+(14, 2, 7, 'kiem tra', 'kiem-tra');
 
 -- --------------------------------------------------------
 
@@ -569,6 +613,7 @@ CREATE TABLE `hbb_news` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `avatar` varchar(255) NOT NULL,
+  `reviews` int(10) NOT NULL,
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -576,14 +621,15 @@ CREATE TABLE `hbb_news` (
 -- Dumping data for table `hbb_news`
 --
 
-INSERT INTO `hbb_news` (`id`, `menu_news_id`, `created_at`, `updated_at`, `avatar`, `status`) VALUES
-(1, 1, '2017-07-13 03:18:04', '0000-00-00 00:00:00', 'news-4.jpg', 1),
-(2, 1, '2017-07-13 03:18:00', '2017-07-13 03:21:00', 'news-3.jpg', 1),
-(3, 2, '2017-07-13 02:19:19', '0000-00-00 00:00:00', 'news-1.jpg', 1),
-(4, 3, '2017-07-13 01:22:22', '2017-07-13 04:24:42', 'news-2.jpg', 1),
-(5, 4, '2017-07-13 03:18:11', '2017-07-13 04:23:16', 'news-4.jpg', 1),
-(6, 5, '2017-07-13 03:18:14', '2017-07-13 00:16:16', 'news-3.jpg', 1),
-(7, 5, '2017-07-13 03:18:17', '2017-07-13 00:16:16', 'news-3.jpg', 1);
+INSERT INTO `hbb_news` (`id`, `menu_news_id`, `created_at`, `updated_at`, `avatar`, `reviews`, `status`) VALUES
+(1, 1, '2017-07-20 09:11:56', '0000-00-00 00:00:00', 'news-4.jpg', 1, 1),
+(2, 1, '2017-07-20 09:11:56', '2017-07-13 03:21:00', 'news-3.jpg', 1, 1),
+(3, 2, '2017-07-20 09:11:56', '0000-00-00 00:00:00', 'news-1.jpg', 1, 1),
+(4, 3, '2017-07-20 09:11:56', '2017-07-19 19:54:05', 'news-2.jpg', 1, 1),
+(5, 4, '2017-07-20 09:11:56', '2017-07-13 04:23:16', 'news-4.jpg', 1, 1),
+(6, 5, '2017-07-20 09:12:43', '2017-07-13 00:16:16', 'news-3.jpg', 2, 1),
+(7, 5, '2017-07-20 09:11:56', '2017-07-13 00:16:16', 'news-3.jpg', 1, 1),
+(8, 1, '2017-07-20 09:11:56', '2017-07-17 23:12:35', 'news-1.jpg', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -611,14 +657,16 @@ INSERT INTO `hbb_news_translation` (`id`, `news_id`, `news_name`, `news_content`
 (4, 2, 'Thien duong nghi duong - puglia', '213', 'thien-duong-nghi-duong-puglia', 2),
 (5, 3, 'RƯỢU VANG VÀ NHỮNG LỢI ÍCH VỚI VIỆC PHÒNG BỆNH TIM MẠCH.', 'Bệnh tim mạch là một trong những nguyên nhân gây tử vong hàng đầu thế giới. Theo hiệp hội tim mạch Mỹ, các chất phytochemical trong rượu làm tăng cholesterol tốt trong cơ thể, thêm vào đó thành phần chất chống oxy hóa giúp bảo vệ niêm mạc của động mạch vành, mỗi ngày uống 1-2 ly rượu vang sẽ giúp hạn chế khả năng mắc bệnh tim mạch ở cả nam và nữ. <br>\r\nBảo vệ niêm mạc mạch máu.<br>\r\n\r\nTheo Mayo Clinic, trong rượu vang có chứa nhiều chất chống oxy hóa. Trung bình 1lit rượu vang đỏ có chứa khoảng 2.000-6.000mg chất chống oxy hóa.<br>\r\n\r\nTrong đó các chất chống oxy hóa này hoạt tính cao nhất là phải kể đến flavonol chiếm 85% và resveratrol. Các chất này giúp chống lại các gốc tự do và bảo vệ nội mạc bên trong động mạch, giúp sản xuất oxit nitric làm giãn mạch máu não. Từ đó giúp người dùng cải thiện được lưu lượng máu và giảm được nguy cơ tim mạch.<br>\r\n\r\nGiảm lượng cholesterol xấu.<br>\r\n\r\nResvertrol là chất chống oxy hóa được tìm thấy rất nhiều trong trái nho và các loại quả màu đỏ, tím khác như dâu, đậu phộng, mâm xôi, việt quất...Theo các nghiên cứu từ xưa đến nay thì Resvertrol rất có ích cho sức khỏe, đặc biệt là với tim mạch.', 'ruou-vang-va-nhung-loi-ich-voi-viec-phong-benh-tim-mach', 1),
 (6, 3, 'Ruou vang va nhung loi ich voi viec phong benh tim mach', '321', 'ruou-vang-va-nhung-loi-ich-voi-viec-phong-benh-tim-mach', 2),
-(7, 4, 'ĐÁNH GIÁ RƯỢU VANG NHO BẰNG MẮT NHƯ THẾ NÀO LÀ NGON?', 'Khác với rượu mạnh, rượu vang là đồ uống đòi hỏi sự tinh tế khi thưởng thức.\r\nĐánh giá độ ngon của rượu vang bằng vị giác và khứu giác là cách nhiều người đã biết. Nhưng đánh giá rượu vang bằng mắt như thế nào là ngon bạn đã biết chưa? Hãy đọc bài viết dưới đây để hiểu thêm nhé.<br>\r\n\r\n1. Quan sát màu sắc<br>\r\nMàu sắc của rượu vang chủ yếu là đỏ, trắng hoặc hồng - những điểm cần được nhận định là sắc thái, cường độ, và những thuộc tính bên trong mỗi loại màu. Hãy rót rượu vào 1/3 ly, giữ phần chân, để ly đối chiếu với một phông nền trắng – 1 khăn bàn hoặc 1 mẩu giấy. Sau đó nghiêng ly để rượu được trải từ phần đáy ly đến miệng ly, nhờ vậy các sắc thái khác nhau của rượu được thể hiện rõ ràng. <br>\r\n\r\n2. Độ trong <br>\r\nGiữ ly để bạn có thể nhìn xuyên qua rượu, trước tiên đối chiếu với một phông nền trắng, và rồi đối chiếu với một nguồn sáng dịu, như ánh sáng từ cửa sổ, chứ không trực tiếp trong ánh sáng của nắng hay bóng đèn. Các loại rượu vang thường biểu lộ những mức độ trong khác nhau, từ sáng tươi đến trong suốt bình thường, đến mờ và đục. <br>\r\n \r\nĐộ trong là một biểu thị chủ yếu về chất lượng, rượu vang được ủ từ 3 đến 9 tháng sẽ có màu sắc rực rỡ và trong suốt. Khi ủ lâu có thể sẽ có cặn (một số loại rượu vang để cấu trúc rượu tiếp tục trưởng thành trong chai  nhà sản xuất không lọc khi đóng chai,nên trong rượu còn cặn).<br>\r\n\r\n3. Độ đậm đà<br>\r\n Để đánh giá độ đậm hay loãng của rươu, hãy lắc nhẹ ly để rượu chuyển động lên thành ly. Sau đó, rượu sẽ từ từ chảy từ thành ly xuống tạo thành đường nét như cánh cửa nhà thờ, rượu chảy xuống càng chậm, đường cửa nhà thờ càng rõ thì độ đâm đà của chai rượu càng cao. Sự suy xét về độ đậm đà và kết cấu của rượu được hoàn tất và xác nhận sau đó bằng cảm nhận của vòm họng. <br>\r\n \r\n4. Tính chất sủi tăm<br>\r\nSự đánh giá về sủi tăm chỉ áp dụng cho các rượu vang có bọt, được chia làm hai loại chính: rượu vang Frizzante – đôi khi cũng được gọi là Vivace hoặc Brioso – có tính chất sủi tăm nhẹ hoặc trung bình (từ 1,5 đến 2 gram carbon dioxide/lít), trong khi rượu vang Spumante (từ tiếng Ý spuma) là rượu vang sủi tăm trọn vẹn, có áp suất từ 3,5 đến 6 atmosphere. Dấu hiệu chính của độ tinh tế trong rượu vang sủi tăm là kích cỡ và cường độ của các bọt carbon dioxide nổi lên từ đáy cốc. ', 'danh-gia-ruou-vang-bang-mat-nhu-the-nao-la-ngon', 1),
-(8, 4, 'Danh gia ruou vang bang mat nhu the nao la ngon', '4321', 'danh-gia-ruou-vang-bang-mat-nhu-the-nao-la-ngon', 2),
+(7, 4, 'Đánh giá rượu vang nho bằng mắt như thế nào là ngon?', '<p>Kh&aacute;c với rượu mạnh, rượu vang l&agrave; đồ uống đ&ograve;i hỏi sự tinh tế khi thưởng thức. Đ&aacute;nh gi&aacute; độ ngon của rượu vang bằng vị gi&aacute;c v&agrave; khứu gi&aacute;c l&agrave; c&aacute;ch nhiều người đ&atilde; biết. Nhưng đ&aacute;nh gi&aacute; rượu vang bằng mắt như thế n&agrave;o l&agrave; ngon bạn đ&atilde; biết chưa? H&atilde;y đọc b&agrave;i viết dưới đ&acirc;y để hiểu th&ecirc;m nh&eacute;.<br />\r\n1. Quan s&aacute;t m&agrave;u sắc<br />\r\nM&agrave;u sắc của rượu vang chủ yếu l&agrave; đỏ, trắng hoặc hồng - những điểm cần được nhận định l&agrave; sắc th&aacute;i, cường độ, v&agrave; những thuộc t&iacute;nh b&ecirc;n trong mỗi loại m&agrave;u. H&atilde;y r&oacute;t rượu v&agrave;o 1/3 ly, giữ phần ch&acirc;n, để ly đối chiếu với một ph&ocirc;ng nền trắng &ndash; 1 khăn b&agrave;n hoặc 1 mẩu giấy. Sau đ&oacute; nghi&ecirc;ng ly để rượu được trải từ phần đ&aacute;y ly đến miệng ly, nhờ vậy c&aacute;c sắc th&aacute;i kh&aacute;c nhau của rượu được thể hiện r&otilde; r&agrave;ng.<br />\r\n2. Độ trong<br />\r\nGiữ ly để bạn c&oacute; thể nh&igrave;n xuy&ecirc;n qua rượu, trước ti&ecirc;n đối chiếu với một ph&ocirc;ng nền trắng, v&agrave; rồi đối chiếu với một nguồn s&aacute;ng dịu, như &aacute;nh s&aacute;ng từ cửa sổ, chứ kh&ocirc;ng trực tiếp trong &aacute;nh s&aacute;ng của nắng hay b&oacute;ng đ&egrave;n. C&aacute;c loại rượu vang thường biểu lộ những mức độ trong kh&aacute;c nhau, từ s&aacute;ng tươi đến trong suốt b&igrave;nh thường, đến mờ v&agrave; đục.<br />\r\nĐộ trong l&agrave; một biểu thị chủ yếu về chất lượng, rượu vang được ủ từ 3 đến 9 th&aacute;ng sẽ c&oacute; m&agrave;u sắc rực rỡ v&agrave; trong suốt. Khi ủ l&acirc;u c&oacute; thể sẽ c&oacute; cặn (một số loại rượu vang để cấu tr&uacute;c rượu tiếp tục trưởng th&agrave;nh trong chai nh&agrave; sản xuất kh&ocirc;ng lọc khi đ&oacute;ng chai,n&ecirc;n trong rượu c&ograve;n cặn).<br />\r\n3. Độ đậm đ&agrave;<br />\r\nĐể đ&aacute;nh gi&aacute; độ đậm hay lo&atilde;ng của rươu, h&atilde;y lắc nhẹ ly để rượu chuyển động l&ecirc;n th&agrave;nh ly. Sau đ&oacute;, rượu sẽ từ từ chảy từ th&agrave;nh ly xuống tạo th&agrave;nh đường n&eacute;t như c&aacute;nh cửa nh&agrave; thờ, rượu chảy xuống c&agrave;ng chậm, đường cửa nh&agrave; thờ c&agrave;ng r&otilde; th&igrave; độ đ&acirc;m đ&agrave; của chai rượu c&agrave;ng cao. Sự suy x&eacute;t về độ đậm đ&agrave; v&agrave; kết cấu của rượu được ho&agrave;n tất v&agrave; x&aacute;c nhận sau đ&oacute; bằng cảm nhận của v&ograve;m họng.<br />\r\n4. T&iacute;nh chất sủi tăm<br />\r\nSự đ&aacute;nh gi&aacute; về sủi tăm chỉ &aacute;p dụng cho c&aacute;c rượu vang c&oacute; bọt, được chia l&agrave;m hai loại ch&iacute;nh: rượu vang Frizzante &ndash; đ&ocirc;i khi cũng được gọi l&agrave; Vivace hoặc Brioso &ndash; c&oacute; t&iacute;nh chất sủi tăm nhẹ hoặc trung b&igrave;nh (từ 1,5 đến 2 gram carbon dioxide/l&iacute;t), trong khi rượu vang Spumante (từ tiếng &Yacute; spuma) l&agrave; rượu vang sủi tăm trọn vẹn, c&oacute; &aacute;p suất từ 3,5 đến 6 atmosphere. Dấu hiệu ch&iacute;nh của độ tinh tế trong rượu vang sủi tăm l&agrave; k&iacute;ch cỡ v&agrave; cường độ của c&aacute;c bọt carbon dioxide nổi l&ecirc;n từ đ&aacute;y cốc.</p>', 'danh-gia-ruou-vang-nho-bang-mat-nhu-the-nao-la-ngon', 1),
+(8, 4, 'Danh gia ruou vang bang mat nhu the nao la ngon', '<p>4321</p>', 'danh-gia-ruou-vang-bang-mat-nhu-the-nao-la-ngon', 2),
 (9, 5, 'RƯỢU VANG OCHAGAVIA SILVESTRE VÀ CÂU CHUYỆN LỊCH SỬ', 'Năm 1970 trước khi Chile độc lập, Silvestre Ochagavia Echazarreta đã cho xây dựng căn biệt thự lộng lẫy Casona Lo Ochagavia ở trung tâm của thành phố Santiago. 50 năm sau, căn biệt thự kiểu sang trọng đón chào sự ra đời của Don Silvestre, chủ sở hữu cháu trai người sáng lập và tương lai của Viña Ochagavia.<br>\r\n\r\nNgày 18 tháng 9 Chile công bố ngày độc lập, từ đó Casona Lo Ochagavia được sử dụng làm trụ sở cũng như trại huấn luyện cho quân giải phóng. Từ đó Don Silvestre quyết định tham gia vào chính trị và thách thức trở thành Bộ trưởng Bộ Ngoại giao dưới thời chính quyền của Tổng thống Manuel Bulnes. Với cương vị đó đòi hỏi ông phải di chuyển nhiều giữa các lục địa. Sau đó, ông quyết định định cư và làm việc cho một nhà sản xuất rượu vang ở vùng Bordeaux của Pháp.<br>\r\nNgoài nghĩa vụ chính trị của mình, Don Silvestre bỏ khá nhiều thời gian để nghiên cứu sự khác biệt về văn hóa rượu vang, các giống nho, các chất đất trồng nho giữa Chile và Pháp. Sau bốn năm nghiên cứu ở Pháp, Don Silvestre quyết định trở về Chile với những kiến thức và các kỹ thuật học được cùng một nhóm các chuyên gia dày dạn kinh nghiệm và bắt đầu giâm những cành giống đầu tiên của Bordeaux<br>\r\n\r\nNăm 1851 những trái nho đầu tiên của các giống nho Semillon, Sauvignon Blanc và Riesling đã được thu hoạch. Sau đó là đến những giống nho Cabernet Sauvignon, Malbec, Merlot và Pinot Noir. Những trái nho này khi được trồng ở miền đất mới có chất lượng vô cùng tốt không kém gì quê hương của chúng cả. Từ đó các chuyên gia người Pháp Joseph Bertand đã chính thức gia nhập nhà máy sản xuất rượu vang và nhanh chóng trở thành cánh tay phải của Don Silvestre.<br>\r\n\r\nTheo gương của Don Silvestre nhiều nhà máy rượu vang mới bắt đầu xuất hiện ở Chile và đầu tư sản xuất những giống nho đến từ vùng Bordeaux theo cách thức ngày càng chuyên nghiệp. Người ta dần tìm ra nhiều cách để các giống mới thích ứng với khí hậu và thổ nhưỡng ở Chile và nhanh chóng hiểu được tiềm năng của khu vực trung tâm trong việc phát triển rượu vang chất lượng.<br>\r\n\r\nNăm 1868, dịch hại phylloxera đã tàn phá những cây nho của hầu hết các vườn nho châu Âu. Tuy nhiên, Chile không bị ảnh hưởng bởi dịch hại và trở thành một nơi trú ẩn an toàn của các giống nho nổi tiếng và quý giá của thế giới. Từ đó nơi đây đã thu hút được nhiều nhà sản xuất rượu châu Âu đến tìm kiếm những cơ hội mới.', 'ruou-vang-ochagavia-silvestre-va-cau-chuyen-lich-su', 1),
 (10, 5, 'Ruou vang ochagavia silvestre va cau chuyen lich su', '54321', 'ruou-vang-ochagavia-silvestre-va-cau-chuyen-lich-su', 2),
 (11, 6, 'RƯỢU VANG VÀ DANH NHÂN', 'TỔNG THỐNG MỸ PHÁ SẢN VÌ RƯỢU VANG<br>\r\n\r\nTổng thống Thomas Jefferson, (Tổng thống thứ 3) xuất thân là một nhà văn nổi tiếng, đồng thời cũng là tác giả chính của bản Tuyên ngôn độc lập của nước Mỹ. Ngoài ra, Thomas Jefferson cũng được xem là một trong những tổng thống nghèo nhất của Mỹ, Ông phải vay nợ trong suốt cuộc đời mình. Một phần có lẽ do sở thích đặc biệt của ông dành cho Rượu vang với rất nhiều loại khác nhau như của Pháp và Ý, từ Montepulciano, Nebbiolo của vùng Piedmont, đến Hermitage trắng của Pháp. Jefferson dường như không ngăn nổi sở thích ngày càng lớn của mình và cuối đời đi đến bờ vực phá sản bởi đam mê sở hữu những chai vang ngon, đắt tiền.<br>\r\nLỄ NHẬM CHỨC SUÝT THÀNH THẢM HỌA<br>\r\n\r\nKhi Andrew Jackson (Tổng thống thứ 7) tới Washington để làm lễ tuyên thệ nhậm chức vào năm 1829, một đám đông từ 10.000 - 30.000 người ủng hộ đã bao vây chiếc xe ngựa của ông, lúc nó chạy tới Nhà Trắng. Những kẻ này không phải dân quý tộc ở Washington mà chỉ là đám đông xô bồ, đã tiến vào, làm bẩn và gây cảnh hỗn loạn trong Nhà Trắng, đe dọa phá hỏng lễ nhậm chức của Jackson. Để "dẹp loạn", Jackson đã cho người đưa rượu vang ra đặt ngoài Nhà Trắng để lực lượng "ủng hộ trên" lấy và mang về nhà. Quả nhiên khi nghe tin phát rượu, những con người kia đã nhanh chóng rời khỏi Nhà Trắng. Họ vừa ra về cùng số rượu mà tân Tổng thống mới tặng, vừa nghêu ngao hát vang như những người chiến thắng.<br>\r\nTRUYỀN THỐNG UỐNG RƯỢU VANG “MADE IN USA”<br>\r\n\r\nTruyền thống “bắt buộc” uống rượu vang “Made in USA” bắt đầu có từ năm 1977 sau khi Tổng Thống Jimmy Carter tuyên thệ nhậm chức, xóa bỏ kiểu cách chỉ uống rượu vang Tây từng nổi bật dưới thời Kennedy và Nixon. Không rõ vì lý do gì ông Carter lại chỉ thị cho nhân viên nhà bếp chỉ khoản đãi khách bằng vang Mỹ, nhưng đến giờ vẫn được các vị nguyên thủ Hoa Kỳ tôn trọng. Nên nhớ: Thực đơn các bữa tiệc của Nhà Trắng bao giờ cũng kèm theo tên những loại rượu vang (và nhà sản xuất), thực đơn này cũng được Nhà Trắng gửi tặng nhà sản xuất rượu giữ làm kỷ niệm hay để khoe với khách hàng. Đây là một quyết định sáng suốt về chính trị lẫn kinh tế, giúp phát triển ngành trồng nho làm rượu vang và sản xuất rượu vang của quốc gia. Và khi đó người dân Hoa Kỳ mới hãnh diện vì nước mình có rượu vang ngon chẳng kém gì nước Pháp.', 'ruou-vang-va-doanh-nhan', 1),
 (12, 6, 'Ruou vang va doanh nhan', '654321', 'ruou-vang-va-doanh-nhan', 2),
 (13, 7, 'Sicilia - Hòn đảo cực Nam xinh đẹp của Ý', 'Giới thiệu chung:<br>\r\n\r\nRượu vang Italia được biết đến như món đồ uống của cả thế giới bởi đất nước Italia có đến hơn 350 loại nho khác nhau, là quốc gia đứng thứ 3 về diện tích trồng nho. Đây cũng là nước sản xuất rượu vang lớn nhất, lâu đời nhất thế giới và sản phẩm rượu vang Sicilia là 1 trong 5 vùng rượu vang hàng đầu được người sành vang yêu thích.<br>\r\n\r\nSicily (Sicilia) một vùng đất huyền thoại không chỉ nổi tiếng bởi gắn liền với tên tuổi của tiểu thuyết “Bố già” mà nó còn là hòn đảo cực Nam xinh đẹp của Ý đã có truyền thống sản xuất rượu vang hơn nghìn năm nay.<br>\r\n\r\nNằm trong vùng biển miền Trung Địa Trung Hải và phía nam của bán đảo Ý, được ngăn cách bởi eo biển hẹp của Messina, đây là hòn đảo lớn nhất trên biển Địa Trung Hải. Nó tạo thành một khu vực tự trị của Ý, cùng với các đảo nhỏ xung quanh, chính thức được gọi là Regione Siciliana (trong tiếng Ý, vùng Sicilia). Khu vực này có lịch sử phát triển lâu dài, đi cùng với nó là sự ra đời và phát triển của rất nhiều dòng rượu vang Ý nổi tiếng.<br>\r\nĐịa lý Sicily<br>\r\n\r\nSicily chạy dài 280km về phía đông sang tây và tương đương một phần ba khoảng cách từ bắc tới nam, tạo nên hình dạng giống như một hình tam giác. Đất Sicily và những ngọn núi nơi đây là mối quan tâm đặc biệt khi nói đến nghề trồng nho của hòn đảo. Nổi bật với ngọn núi lửa Etna cao chót vót vẫn đang còn hoạt động, với độ cao 3,329 m, thống trị đường chân trời phía đông của hòn đảo, tạo nên lượng khoáng sản dồi dào trong đất đặc trưng cho các vườn nho DOC Etna.', 'sicilia-hon-dao-cuc-nam-xinh-dep-cua-y', 1),
-(14, 7, 'Sicilia - Hon dao cuc nam xinh dep cua y', '7654321', 'sicilia-hon-dao-cuc-nam-xinh-dep-cua-y', 2);
+(14, 7, 'Sicilia - Hon dao cuc nam xinh dep cua y', '7654321', 'sicilia-hon-dao-cuc-nam-xinh-dep-cua-y', 2),
+(15, 8, 'nho đỏ Ninh Thuận', '<p>aa</p>', 'nho-do-ninh-thuan', 1),
+(16, 8, 'nho do Ninh Thuan', '<p>bb</p>', 'nho-do-ninh-thuan', 2);
 
 -- --------------------------------------------------------
 
@@ -629,7 +677,7 @@ INSERT INTO `hbb_news_translation` (`id`, `news_id`, `news_name`, `news_content`
 CREATE TABLE `hbb_permission` (
   `id` int(11) NOT NULL,
   `permission` varchar(100) NOT NULL,
-  `link` text NOT NULL,
+  `link` varchar(225) NOT NULL,
   `note` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -642,7 +690,20 @@ INSERT INTO `hbb_permission` (`id`, `permission`, `link`, `note`) VALUES
 (2, 'System config', 'admin/system-config', 'Update'),
 (3, 'System language', 'admin/system-language', 'Create, Edit, Delete, View list'),
 (4, 'Menu management', '1-menu-management', 'Create, Edit, Delete, View list'),
-(6, 'asdf', '1499610983.png', 'ac');
+(8, 'Slider management', 'admin/slider', 'Create, Edit, Delete, View list'),
+(9, 'Product management', 'admin/1-product', 'Create, Edit, Delete, View list'),
+(10, 'Collection management', 'admin/1-collection', 'Create, Edit, Delete, View list'),
+(11, 'Brand management', 'admin/1-brand', 'Create, Edit, Delete, View list'),
+(12, 'Country management', 'admin/1-country', 'Create, Edit, Delete, View list'),
+(13, 'News management', 'admin/1-news', 'Create, Edit, Delete, View list'),
+(14, 'Menu News management', 'admin/1-menu-news', 'Update, View list'),
+(15, 'Menu Home management', 'admin/1-menu-management', 'Update, View list'),
+(16, 'Wine Center management', 'admin/1-wine-center', 'Update, View list'),
+(17, 'Address management', 'admin/1-address-management', 'Create, Edit, Delete, View list'),
+(18, 'Label management', 'admin/1-labels-management', 'Update, View list'),
+(19, 'Subscribe management', 'admin/subscribe-management', 'Edit, Delete, View list'),
+(20, 'Subscribe Wine management', 'admin/subscribe-wine-management', 'Edit, Delete, View list'),
+(21, 'User management', 'admin/user-management', 'Create, Edit, Delete, View list');
 
 -- --------------------------------------------------------
 
@@ -670,19 +731,35 @@ INSERT INTO `hbb_products` (`id`, `avatar`, `created_at`, `updated_at`, `collect
 (1, 'product.png', '2017-07-17 02:37:05', '2017-07-11 02:24:00', 8, 1, 0.74, 2, 1),
 (2, 'product1.png', '2017-07-12 09:40:54', '2017-07-11 02:24:00', 4, 1, 1, 2, 1),
 (3, 'product2.png', '2017-07-12 09:40:58', '2017-07-11 02:24:00', 8, 1, 1.75, 2, 1),
-(10, 'banner.jpg', '2017-07-12 03:32:30', '2017-07-12 03:32:30', 4, 1, 1.25, 2, 2),
-(11, '2.jpg', '2017-07-12 03:34:41', '2017-07-12 03:34:41', 8, 1, 1.25, 1, 2),
+(10, 'white-wine.jpg', '2017-07-18 08:34:25', '2017-07-12 03:32:30', 4, 1, 1.25, 2, 2),
+(11, 'red-wine.jpg', '2017-07-18 08:33:15', '2017-07-12 03:34:41', 8, 1, 1.25, 1, 2),
 (12, 'red-wine.jpg', '2017-07-17 07:13:45', '2017-07-16 16:29:47', 9, 1, 1.25, 2, 2),
 (13, 'product.png', '2017-07-17 07:16:52', '2017-07-16 16:26:51', 10, 0, 1.25, 2, 2),
-(14, 'banner.jpg', '2017-07-16 13:28:33', '2017-07-16 13:28:33', 8, 1, 1.25, 2, 1),
+(14, 'white-wine.jpg', '2017-07-18 08:34:29', '2017-07-16 13:28:33', 8, 1, 1.25, 2, 1),
 (15, 'product.png', '2017-07-16 13:28:59', '2017-07-16 13:28:59', 8, 1, 0.74, 2, 2),
 (16, 'product.png', '2017-07-16 13:29:51', '2017-07-16 13:29:51', 4, 1, 0.74, 1, 1),
 (17, 'product.png', '2017-07-16 13:30:42', '2017-07-16 13:30:42', 4, 1, 0.74, 1, 1),
-(18, 'banner.jpg', '2017-07-16 13:31:49', '2017-07-16 13:31:49', 8, 1, 1.25, 2, 2),
+(18, 'white-wine.jpg', '2017-07-18 08:34:32', '2017-07-16 13:31:49', 8, 1, 1.25, 2, 2),
 (19, 'product.png', '2017-07-16 13:36:23', '2017-07-16 13:36:23', 8, 1, 0.74, 2, 2),
 (20, 'product.png', '2017-07-16 13:39:46', '2017-07-16 13:39:46', 8, 1, 0.74, 2, 1),
 (40, 'red-wine.jpg', '2017-07-16 17:26:12', '2017-07-16 17:26:12', 8, 1, 0.3, 2, 2),
-(41, 'product.png', '2017-07-16 17:32:21', '2017-07-16 17:32:21', 12, 1, 0.4, 1, 2);
+(41, 'product.png', '2017-07-16 17:32:21', '2017-07-16 17:32:21', 12, 1, 0.4, 1, 2),
+(42, 'product.png', '2017-07-18 01:18:18', '2017-07-18 01:18:18', 8, 1, 0.4, 2, 2),
+(43, 'red-wine.jpg', '2017-07-18 01:19:20', '2017-07-18 01:19:20', 9, 1, 1.25, 3, 2),
+(44, 'product.png', '2017-07-18 01:20:17', '2017-07-18 01:20:17', 15, 1, 3.23, 2, 1),
+(45, 'product.png', '2017-07-18 01:21:04', '2017-07-18 01:21:04', 9, 1, 2.5, 2, 1),
+(46, 'news-2.jpg', '2017-07-18 01:22:09', '2017-07-18 01:22:09', 2, 1, 0.74, 3, 1),
+(47, 'red-wine.jpg', '2017-07-18 01:22:56', '2017-07-18 01:22:56', 12, 1, 3.5, 2, 2),
+(48, 'news-1.jpg', '2017-07-18 01:24:00', '2017-07-18 01:24:00', 2, 1, 4.5, 2, 2),
+(49, 'news-1.jpg', '2017-07-18 01:24:25', '2017-07-18 01:24:25', 2, 1, 4.5, 2, 2),
+(50, 'red-wine.jpg', '2017-07-18 01:25:27', '2017-07-18 01:25:27', 2, 1, 0.4, 1, 1),
+(51, 'banner.jpg', '2017-07-19 21:52:39', '2017-07-19 21:52:39', 12, 1, 0.5, 2, 1),
+(52, 'red-wine.jpg', '2017-07-18 01:26:46', '2017-07-18 01:26:46', 8, 1, 0.5, 1, 2),
+(53, 'product.png', '2017-07-18 01:27:27', '2017-07-18 01:27:27', 15, 1, 0.5, 3, 2),
+(54, 'news-2.jpg', '2017-07-18 19:18:57', '2017-07-18 19:18:57', 17, 1, 1.75, 2, 1),
+(55, 'vino_vinograd_butylka_listya_prev.jpg', '2017-07-19 21:32:09', '2017-07-19 21:32:09', 8, 1, 0.25, 1, 2),
+(56, 'red-wine.jpg', '2017-07-19 21:06:59', '2017-07-19 21:06:59', 8, 1, 0.25, 1, 2),
+(57, 'address.jpg', '2017-07-19 21:42:42', '2017-07-19 21:42:42', 4, 1, 0.15, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -727,7 +804,36 @@ INSERT INTO `hbb_products_translation` (`id`, `language_id`, `product_id`, `prod
 (23, 1, 40, 'C\'era Una Volta Bonarda', 'C\'era una Volta Bonardaki nổi bật với màu đỏ ruby ​​tinh tế và mang hương vị trái cây như cherry đen và hạnh nhân. Ngay khi tiếp xúc với khoang miệng, vị chát trong rượu nhẹ nhàng nổi lên, tiếp đó là vị ngọt và chua nhẹ, kích thích vị giác. Đặc biệt, hậu vị còn đọng lại hương vị tươi mới rõ nét. Kết thúc ly rượu, hương thơm hoa hồng vẫn còn thoang thoảng.', 'cera-una-volta-bonarda'),
 (24, 2, 40, 'C\'era Una Volta Bonarda', 'C\'era una Volta Bonardaki nổi bật với màu đỏ ruby ​​tinh tế và mang hương vị trái cây như cherry đen và hạnh nhân. Ngay khi tiếp xúc với khoang miệng, vị chát trong rượu nhẹ nhàng nổi lên, tiếp đó là vị ngọt và chua nhẹ, kích thích vị giác. Đặc biệt, hậu vị còn đọng lại hương vị tươi mới rõ nét. Kết thúc ly rượu, hương thơm hoa hồng vẫn còn thoang thoảng.', 'cera-una-volta-bonarda'),
 (25, 1, 41, 'The Brothers', 'Rượu vang trắng New Zealand - The Brothers\r\n\r\nThe Brothers - Tình huynh đệ keo sơn. Rượu vang The Brothers đến từ New Zealand với vị chua nhẹ nhàng và hương thơm vô cùng ấn tượng của ổi chín, táo xanh, lê vàng. Chai vang The Brothers lôi cuốn người thưởng thức ngay từ ngụm đầu tiên cho đến giọt cuối cùng', 'the-brothers'),
-(26, 2, 41, 'The Brothers', 'Rượu vang trắng New Zealand - The Brothers\r\n\r\nThe Brothers - Tình huynh đệ keo sơn. Rượu vang The Brothers đến từ New Zealand với vị chua nhẹ nhàng và hương thơm vô cùng ấn tượng của ổi chín, táo xanh, lê vàng. Chai vang The Brothers lôi cuốn người thưởng thức ngay từ ngụm đầu tiên cho đến giọt cuối cùng', 'the-brothers');
+(26, 2, 41, 'The Brothers', 'Rượu vang trắng New Zealand - The Brothers\r\n\r\nThe Brothers - Tình huynh đệ keo sơn. Rượu vang The Brothers đến từ New Zealand với vị chua nhẹ nhàng và hương thơm vô cùng ấn tượng của ổi chín, táo xanh, lê vàng. Chai vang The Brothers lôi cuốn người thưởng thức ngay từ ngụm đầu tiên cho đến giọt cuối cùng', 'the-brothers'),
+(27, 1, 42, 'Gran Reserva: Cabernet Sauvignon', '<p><strong>Rượu vang&nbsp;Gran Reserva: Cabernet Sauvignon của h&atilde;ng&nbsp;Santa Carolina danh tiếng với hơn 140 năm lịch sử - l&agrave; một trong những sản phẩm tuyệt vời đến từ Chile.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Gran Reserva: Cabernet Sauvignon</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Santa Carolina -&nbsp;<a data-mce-href="http://wineplaza.vn/chile.html" href="http://wineplaza.vn/chile.html">Chile</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;14,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html" href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html">Cabernet Sauvignon</a>&nbsp;tại thung lũng Maipo, Chile</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;88/100 (Wine-Searcher)</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'gran-reserva-cabernet-sauvignon'),
+(28, 2, 42, 'Gran Reserva: Cabernet Sauvignon', '<p><strong>Rượu vang&nbsp;Gran Reserva: Cabernet Sauvignon của h&atilde;ng&nbsp;Santa Carolina danh tiếng với hơn 140 năm lịch sử - l&agrave; một trong những sản phẩm tuyệt vời đến từ Chile.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Gran Reserva: Cabernet Sauvignon</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Santa Carolina -&nbsp;<a data-mce-href="http://wineplaza.vn/chile.html" href="http://wineplaza.vn/chile.html">Chile</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;14,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html" href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html">Cabernet Sauvignon</a>&nbsp;tại thung lũng Maipo, Chile</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;88/100 (Wine-Searcher)</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'gran-reserva-cabernet-sauvignon'),
+(29, 1, 43, 'Adobe Reserva Cabernet Sauvignon', '<p><strong>Sản phẩm rượu vang Adobe c&oacute; chất lượng cao đến từ Chile - l&agrave; sự lựa chọn ho&agrave;n hảo cho c&aacute;c bữa ăn h&agrave;ng ng&agrave;y</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2><strong>Emiliana Adobe&nbsp;Reserva Cabernet Sauvignon</strong></h2>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Emiliana -&nbsp;<a data-mce-href="http://wineplaza.vn/chile.html" href="http://wineplaza.vn/chile.html">Chile</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;13,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html" href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html">Cabernet Sauvignon</a>&nbsp;(92%), Merlot (8%).</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'adobe-reserva-cabernet-sauvignon'),
+(30, 2, 43, 'Adobe Reserva Cabernet Sauvignon', '<p><strong>Sản phẩm rượu vang Adobe c&oacute; chất lượng cao đến từ Chile - l&agrave; sự lựa chọn ho&agrave;n hảo cho c&aacute;c bữa ăn h&agrave;ng ng&agrave;y</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2><strong>Emiliana Adobe&nbsp;Reserva Cabernet Sauvignon</strong></h2>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Emiliana -&nbsp;<a data-mce-href="http://wineplaza.vn/chile.html" href="http://wineplaza.vn/chile.html">Chile</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;13,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html" href="http://wineplaza.vn/giong-nho-cabernet-sauvignon.html">Cabernet Sauvignon</a>&nbsp;(92%), Merlot (8%).</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'adobe-reserva-cabernet-sauvignon'),
+(31, 1, 44, 'The Gate 2010', '<p><strong>Rượu vang đỏ Australia - The Gate 2010</strong></p>\r\n\r\n<p>Rượu c&oacute; hương thơm của chocolate đen, hương cafe v&agrave; ti&ecirc;u đen kh&aacute; r&otilde;. Rượu c&oacute; vị ch&aacute;t đậm đ&agrave; lan tỏa to&agrave;n bộ khoang miệng l&agrave;m người uống rất dễ cảm nhận vẻ mạnh mẽ của The Gate 2012.</p>\r\n\r\n<h2><strong>&nbsp;</strong></h2>\r\n\r\n<h2><strong>The Gate 2010 -&nbsp;C&aacute;nh cửa của kh&aacute;t khao</strong></h2>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Shingleback, Vườn nho&nbsp;Davey Estate v&ugrave;ng McLaren Vale - Australia</p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;13,8%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong>Shiraz</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;N/a</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'the-gate-2010'),
+(32, 2, 44, 'The Gate 2010', '<p><strong>Rượu vang đỏ Australia - The Gate 2010</strong></p>\r\n\r\n<p>Rượu c&oacute; hương thơm của chocolate đen, hương cafe v&agrave; ti&ecirc;u đen kh&aacute; r&otilde;. Rượu c&oacute; vị ch&aacute;t đậm đ&agrave; lan tỏa to&agrave;n bộ khoang miệng l&agrave;m người uống rất dễ cảm nhận vẻ mạnh mẽ của The Gate 2012.</p>\r\n\r\n<h2><strong>&nbsp;</strong></h2>\r\n\r\n<h2><strong>The Gate 2010 -&nbsp;C&aacute;nh cửa của kh&aacute;t khao</strong></h2>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Shingleback, Vườn nho&nbsp;Davey Estate v&ugrave;ng McLaren Vale - Australia</p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;13,8%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong>Shiraz</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;N/a</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'the-gate-2010'),
+(33, 1, 45, 'Megale 2013', '<p><strong>Rượu vang đỏ &Yacute; - Megale 2013</strong></p>\r\n\r\n<p>Rượu vang Megale&nbsp;c&oacute; m&agrave;u đỏ đằm thắm, hương thơm dịu d&agrave;ng, vị b&ugrave;i ch&aacute;t ngậy h&ograve;a quyện v&agrave;o nhau h&agrave;i h&ograve;a mực thước sẽ ph&ugrave; hợp với c&aacute;c bữa tiệc đ&ocirc;ng người.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Rượu vang Megale - Đậm đ&agrave; nồng thắm</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html" href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html">Cantine Tinazzi</a>&nbsp;-&nbsp;<a data-mce-href="http://wineplaza.vn/italy.html" href="http://wineplaza.vn/italy.html">Italy</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a></p>\r\n\r\n<p><strong>Nồng độ cồn:&nbsp;</strong>12,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-negroamaro.html" href="http://wineplaza.vn/giong-nho-negroamaro.html">Negroamaro&nbsp;</a></p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'megale-2013'),
+(34, 2, 45, 'Megale 2013', '<p><strong>Rượu vang đỏ &Yacute; - Megale 2013</strong></p>\r\n\r\n<p>Rượu vang Megale&nbsp;c&oacute; m&agrave;u đỏ đằm thắm, hương thơm dịu d&agrave;ng, vị b&ugrave;i ch&aacute;t ngậy h&ograve;a quyện v&agrave;o nhau h&agrave;i h&ograve;a mực thước sẽ ph&ugrave; hợp với c&aacute;c bữa tiệc đ&ocirc;ng người.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Rượu vang Megale - Đậm đ&agrave; nồng thắm</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html" href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html">Cantine Tinazzi</a>&nbsp;-&nbsp;<a data-mce-href="http://wineplaza.vn/italy.html" href="http://wineplaza.vn/italy.html">Italy</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a></p>\r\n\r\n<p><strong>Nồng độ cồn:&nbsp;</strong>12,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-negroamaro.html" href="http://wineplaza.vn/giong-nho-negroamaro.html">Negroamaro&nbsp;</a></p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'megale-2013'),
+(35, 1, 46, 'Negro Amaro 125', '<p><strong>Rượu vang AmaroNegro 125 &nbsp;</strong></p>\r\n\r\n<p>Rượu vang Amaro Negro 125 c&oacute; mầu đỏ ruby hơi ngả sang t&iacute;m c&ugrave;ng với hương thơm m&atilde;nh liệt của C&agrave; Ph&ecirc; tự nhi&ecirc;n, quả Việt Quất v&agrave; D&acirc;u. Lu&ocirc;n mượt m&agrave; v&agrave; nổi bật trong v&ograve;m miệng với vị tr&aacute;i c&acirc;y m&atilde;nh liệt.&nbsp;Pho-m&aacute;t, mỳ &Yacute;, quả Oliu v&agrave; b&aacute;nh Pizza l&agrave; những m&oacute;n ho&agrave;n hảo để kết hợp với loại rượu n&agrave;y.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>AMARO NEGRO 125 &nbsp;- Di sản v&ugrave;ng Salento</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Feudi Salentini</p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong><strong>&nbsp;</strong>12,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:&nbsp;</strong>750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'negro-amaro-125'),
+(36, 2, 46, 'Negro Amaro 125', '<p><strong>Rượu vang AmaroNegro 125 &nbsp;</strong></p>\r\n\r\n<p>Rượu vang Amaro Negro 125 c&oacute; mầu đỏ ruby hơi ngả sang t&iacute;m c&ugrave;ng với hương thơm m&atilde;nh liệt của C&agrave; Ph&ecirc; tự nhi&ecirc;n, quả Việt Quất v&agrave; D&acirc;u. Lu&ocirc;n mượt m&agrave; v&agrave; nổi bật trong v&ograve;m miệng với vị tr&aacute;i c&acirc;y m&atilde;nh liệt.&nbsp;Pho-m&aacute;t, mỳ &Yacute;, quả Oliu v&agrave; b&aacute;nh Pizza l&agrave; những m&oacute;n ho&agrave;n hảo để kết hợp với loại rượu n&agrave;y.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>AMARO NEGRO 125 &nbsp;- Di sản v&ugrave;ng Salento</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Feudi Salentini</p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong><strong>&nbsp;</strong>12,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:&nbsp;</strong>750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 (HN) hoặc&nbsp;0911.84.88.89 (HCM)</strong></p>', 'negro-amaro-125'),
+(37, 1, 47, 'Amarone La Bastia', '<p><strong>Rượu vang đỏ &Yacute; - Amarone La Bastia</strong></p>\r\n\r\n<p>( WP20150001 )</p>\r\n\r\n<h2>Sản phẩm vang xuất sắc của v&ugrave;ng rượu vang Verona, ph&iacute;a T&acirc;y Bắc nước &Yacute;. Amarone La Bastia được sản xuất từ những loại nho đặc trưng nhất của v&ugrave;ng, đạt cấp độ cao nhất &ldquo;DOCG&rdquo; theo Luật rượu vang của &Yacute;.</h2>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2><strong>Sự ho&agrave;n hảo của Verona - Amarone La Bastia</strong></h2>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html" href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html">Cantine Tinazzi</a><a data-mce-href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html" href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html">&nbsp;</a>-&nbsp;<a data-mce-href="http://wineplaza.vn/dat-nuoc.html?countryid=24" href="http://wineplaza.vn/dat-nuoc.html?countryid=24">Italy</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;15%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-corvina.html" href="http://wineplaza.vn/giong-nho-corvina.html">Corvina</a>&nbsp;80%,&nbsp;<a data-mce-href="http://wineplaza.vn/giong-nho-rondinella.html" href="http://wineplaza.vn/giong-nho-rondinella.html">Rondinella</a>&nbsp;15%, Molinara 5%</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Cao cấp</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 hoặc&nbsp;0911.84.88.89&nbsp;</strong></p>', 'amarone-la-bastia'),
+(38, 2, 47, 'Amarone La Bastia', '<p><strong>Rượu vang đỏ &Yacute; - Amarone La Bastia</strong></p>\r\n\r\n<p>( WP20150001 )</p>\r\n\r\n<h2>Sản phẩm vang xuất sắc của v&ugrave;ng rượu vang Verona, ph&iacute;a T&acirc;y Bắc nước &Yacute;. Amarone La Bastia được sản xuất từ những loại nho đặc trưng nhất của v&ugrave;ng, đạt cấp độ cao nhất &ldquo;DOCG&rdquo; theo Luật rượu vang của &Yacute;.</h2>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2><strong>Sự ho&agrave;n hảo của Verona - Amarone La Bastia</strong></h2>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html" href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html">Cantine Tinazzi</a><a data-mce-href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html" href="http://wineplaza.vn/hang-ruou-vang-y-cantine-tinazzi.html">&nbsp;</a>-&nbsp;<a data-mce-href="http://wineplaza.vn/dat-nuoc.html?countryid=24" href="http://wineplaza.vn/dat-nuoc.html?countryid=24">Italy</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;15%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-corvina.html" href="http://wineplaza.vn/giong-nho-corvina.html">Corvina</a>&nbsp;80%,&nbsp;<a data-mce-href="http://wineplaza.vn/giong-nho-rondinella.html" href="http://wineplaza.vn/giong-nho-rondinella.html">Rondinella</a>&nbsp;15%, Molinara 5%</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Cao cấp</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline:</strong>&nbsp;<strong>0911.84.88.98 hoặc&nbsp;0911.84.88.89&nbsp;</strong></p>', 'amarone-la-bastia'),
+(39, 1, 49, 'Rượu Vang Đỏ Tây Ban Nha', '<p>Rượu vang đỏ T&acirc;y Ban Nha - Vall De Lar</p>\r\n\r\n<p><strong>Vall De Lar Tinto</strong>&nbsp;c&oacute; h&agrave;m lượng tanin vừa phải, hương thơm phong ph&uacute; của thảo mộc, mận ch&iacute;n, thuốc l&aacute;, vani. Rượu vang Vall De Lar được sản xuất từ giống nho Tempranillo (Quốc nho của T&acirc;y Ban Nha).</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Rượu vang đỏ T&acirc;y Ban Nha Vall De Lar Tinto</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:&nbsp;</strong>Santaba</p>\r\n\r\n<p><strong>Loại vang</strong><strong>:&nbsp;</strong>Vang đỏ</p>\r\n\r\n<p><strong>Độ cồn</strong>: 13 %</p>\r\n\r\n<p><strong>Giống nho</strong>: Tempranillo</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: Bodegas Santaba</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang. Để mua h&agrave;ng qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911.84.88.98 (HN)&nbsp;</strong></p>\r\n\r\n<p><strong>hoặc 0911.84.88.89 (HCM)</strong></p>', 'ruou-vang-do-tay-ban-nha'),
+(40, 2, 49, 'Vall De Lar Tinto', '<p>Rượu vang đỏ T&acirc;y Ban Nha - Vall De Lar</p>\r\n\r\n<p><strong>Vall De Lar Tinto</strong>&nbsp;c&oacute; h&agrave;m lượng tanin vừa phải, hương thơm phong ph&uacute; của thảo mộc, mận ch&iacute;n, thuốc l&aacute;, vani. Rượu vang Vall De Lar được sản xuất từ giống nho Tempranillo (Quốc nho của T&acirc;y Ban Nha).</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Rượu vang đỏ T&acirc;y Ban Nha Vall De Lar Tinto</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:&nbsp;</strong>Santaba</p>\r\n\r\n<p><strong>Loại vang</strong><strong>:&nbsp;</strong>Vang đỏ</p>\r\n\r\n<p><strong>Độ cồn</strong>: 13 %</p>\r\n\r\n<p><strong>Giống nho</strong>: Tempranillo</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: Bodegas Santaba</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang. Để mua h&agrave;ng qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911.84.88.98 (HN)&nbsp;</strong></p>\r\n\r\n<p><strong>hoặc 0911.84.88.89 (HCM)</strong></p>', 'vall-de-lar-tinto'),
+(41, 1, 50, 'Vall De Lar Blanco 2014', '<p><strong>Vall De Lar Blanco 2014</strong>&nbsp;c&oacute; vị chua đậm, chất rượu vang đậm đặc rất th&iacute;ch hợp để đi k&egrave;m với thức ăn d&ugrave;ng để khai vị.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: Bodegas Santalba</p>\r\n\r\n<p><strong>Loại vang</strong>: Vang trắng</p>\r\n\r\n<p><strong>Giống nho</strong>: Tempranillo Blanco</p>\r\n\r\n<p><strong>Nồng độ cồn</strong>:&nbsp;12.5</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750 ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911.84.88.98 (HN) hoặc 0911.84.88.89 (HCM)</strong></p>', 'vall-de-lar-blanco-2014'),
+(42, 2, 50, 'Vall De Lar Blanco 2014', '<p><strong>Vall De Lar Blanco 2014</strong>&nbsp;c&oacute; vị chua đậm, chất rượu vang đậm đặc rất th&iacute;ch hợp để đi k&egrave;m với thức ăn d&ugrave;ng để khai vị.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: Bodegas Santalba</p>\r\n\r\n<p><strong>Loại vang</strong>: Vang trắng</p>\r\n\r\n<p><strong>Giống nho</strong>: Tempranillo Blanco</p>\r\n\r\n<p><strong>Nồng độ cồn</strong>:&nbsp;12.5</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750 ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911.84.88.98 (HN) hoặc 0911.84.88.89 (HCM)</strong></p>', 'vall-de-lar-blanco-2014'),
+(43, 1, 51, 'Mousai Merlot 2015', '<p>Rượu vang đỏ Chile Mousai Merlot v&ocirc; c&ugrave;ng quyến rũ với hương vani pha ch&uacute;t tinh tế của chocolate v&agrave; c&aacute;c hạt gia vị. H&atilde;y uống v&agrave; cảm nhận Mousai Merlot với vị tannin mạnh mẽ, đầy trưởng th&agrave;nh - điển h&igrave;nh của giống nho được trồng tại thung lũng Colchagua, n&oacute; đưa đến người uống một cấu tr&uacute;c đậm đặc v&agrave; h&agrave;i h&ograve;a thi vị. Vị ch&aacute;t đậm để lại dư &acirc;m tr&agrave;n đầy trong v&ograve;m miệng.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: La Ronciere</p>\r\n\r\n<p>V&ugrave;ng đất trồng: Colchagua</p>\r\n\r\n<p><strong>Loại vang</strong>: Vang đỏ</p>\r\n\r\n<p><strong>Nồng độ cồn</strong>: 13,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho</strong>: 100% Merlot</p>\r\n\r\n<p><strong>Ni&ecirc;n vụ</strong>&nbsp;: 2015</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911.84.88.98 (HN) hoặc 0911.84.88.89 (HCM)</strong></p>', 'mousai-merlot-2015'),
+(44, 2, 51, 'Mousai Merlot 2015', '<p>Rượu vang đỏ Chile Mousai Merlot v&ocirc; c&ugrave;ng quyến rũ với hương vani pha ch&uacute;t tinh tế của chocolate v&agrave; c&aacute;c hạt gia vị. H&atilde;y uống v&agrave; cảm nhận Mousai Merlot với vị tannin mạnh mẽ, đầy trưởng th&agrave;nh - điển h&igrave;nh của giống nho được trồng tại thung lũng Colchagua, n&oacute; đưa đến người uống một cấu tr&uacute;c đậm đặc v&agrave; h&agrave;i h&ograve;a thi vị. Vị ch&aacute;t đậm để lại dư &acirc;m tr&agrave;n đầy trong v&ograve;m miệng.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: La Ronciere</p>\r\n\r\n<p>V&ugrave;ng đất trồng: Colchagua</p>\r\n\r\n<p><strong>Loại vang</strong>: Vang đỏ</p>\r\n\r\n<p><strong>Nồng độ cồn</strong>: 13,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho</strong>: 100% Merlot</p>\r\n\r\n<p><strong>Ni&ecirc;n vụ</strong>&nbsp;: 2015</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911.84.88.98 (HN) hoặc 0911.84.88.89 (HCM)</strong></p>', 'mousai-merlot-2015'),
+(45, 1, 52, 'Primittivo 100 Essenza', '<p>Rượu vang Primittivo 100 Essenza&nbsp;c&oacute; m&ugrave;i thơm dịu d&agrave;ng của cỏ ngọt kh&ocirc; v&agrave; c&aacute;c loại mứt tr&aacute;i c&acirc;y, qu&aacute; tr&igrave;nh lắc sẽ tỏa ra hương thơm nồng n&agrave;n quyến rũ ho&agrave;n vị Tannin sẽ mềm mại nhanh ch&oacute;ng chinh phục được những thực kh&aacute;ch kh&oacute; t&iacute;nh nhất.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Primitivo 100 Essenza - Sự ho&agrave;n hảo của tạo h&oacute;a</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Feudi Salentini</p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong><strong>&nbsp;</strong>15%</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-primitivo.html" href="http://wineplaza.vn/giong-nho-primitivo.html">Primitivo</a>&nbsp;-2012</p>\r\n\r\n<p><strong>Dung t&iacute;ch:&nbsp;</strong>750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911 848 898 (HN) hoặc 0911 848 889 (HCM)</strong></p>', 'primittivo-100-essenza'),
+(46, 2, 52, 'Primittivo 100 Essenza', '<p>Rượu vang Primittivo 100 Essenza&nbsp;c&oacute; m&ugrave;i thơm dịu d&agrave;ng của cỏ ngọt kh&ocirc; v&agrave; c&aacute;c loại mứt tr&aacute;i c&acirc;y, qu&aacute; tr&igrave;nh lắc sẽ tỏa ra hương thơm nồng n&agrave;n quyến rũ ho&agrave;n vị Tannin sẽ mềm mại nhanh ch&oacute;ng chinh phục được những thực kh&aacute;ch kh&oacute; t&iacute;nh nhất.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Primitivo 100 Essenza - Sự ho&agrave;n hảo của tạo h&oacute;a</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Feudi Salentini</p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-do-red-wines.html" href="http://wineplaza.vn/vang-do-red-wines.html">Vang đỏ</a>&nbsp;</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong><strong>&nbsp;</strong>15%</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong><a data-mce-href="http://wineplaza.vn/giong-nho-primitivo.html" href="http://wineplaza.vn/giong-nho-primitivo.html">Primitivo</a>&nbsp;-2012</p>\r\n\r\n<p><strong>Dung t&iacute;ch:&nbsp;</strong>750ml/chai, 12 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Thường nhật</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/"><strong>wineplaza.vn</strong></a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911 848 898 (HN) hoặc 0911 848 889 (HCM)</strong></p>', 'primittivo-100-essenza'),
+(47, 1, 53, 'Moscato Spumante', '<p>Rượu vang nổ (sparkling) Moscato Spumante l&agrave; người chị em song sinh với nh&atilde;n vang trắng DOCG&nbsp;nổi tiếng của Italy:&nbsp;<a data-mce-href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html" href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html">Moscato D&rsquo;Asti</a>. Ho&agrave;n hảo trong những ng&agrave;y h&egrave; oi n&oacute;ng c&ugrave;ng với bạn b&egrave; v&agrave; người th&acirc;n</p>\r\n\r\n<p><strong>Moscato Spumante</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Francesco Capetta -&nbsp;<a data-mce-href="http://wineplaza.vn/italy.html" href="http://wineplaza.vn/italy.html">Italy</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-no-sparkling-wines.html" href="http://wineplaza.vn/vang-no-sparkling-wines.html">Vang nổ</a>&nbsp;(Sparkling)</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;6,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong>Moscato (Muscat Blanc)</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Chất lượng ho&agrave;n hảo &ndash; Wineplaza bảo ho&agrave;n tiền nếu thấy kh&ocirc;ng ngon</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<u>wineplaza.vn</u>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911 848 898 (HN) hoặc 0911 848 889 (HCM)</strong></p>\r\n\r\n<p><strong>Rượu vang nổ Moscato Spumante</strong></p>\r\n\r\n<p>Rượu Sparkling Moscato Spumante l&agrave; người chị em song sinh với nh&atilde;n vang trắng DOCG (<a data-mce-href="http://wineplaza.vn/y-nghia-cac-thuat-ngu-va-nhan-ruou-vang-trong-tieng-y.html" href="http://wineplaza.vn/y-nghia-cac-thuat-ngu-va-nhan-ruou-vang-trong-tieng-y.html">T&igrave;m hiểu luật rượu vang Italy</a>) nổi tiếng của Italy:&nbsp;<a data-mce-href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html" href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html">Moscato D&rsquo;Asti</a>. C&oacute; hương vị c&oacute; nhiều điểm giống Moscato như l&agrave; m&ugrave;i hương độc đ&aacute;o hay hương vị sảng kho&aacute;i những Moscato Spumante c&oacute; nhiều Gas hơn. Để sản xuất, những tr&aacute;i nho sẽ được loại bỏ hạt v&agrave; &eacute;p bằng tay một c&aacute;ch cẩn thận nhất c&oacute; thể ngay sau khi được h&aacute;i để giữ được hương thơm. Qu&aacute; tr&igrave;nh sản xuất v&agrave; ủ men phức tạp sau đ&oacute; l&agrave; cả một nghệ thuật bởi sự cầu k&igrave; về kĩ thuật giữ lạnh, kiểm so&aacute;t độ l&ecirc;n men v&agrave; c&aacute;ch ủ để tạo ra sản phẩm ho&agrave;n hảo. Tuy nhi&ecirc;n qu&aacute; tr&igrave;nh l&ecirc;n men sẽ được ph&acirc;n l&agrave;m 2 qu&aacute; tr&igrave;nh: L&ecirc;n men trong th&ugrave;ng v&agrave; l&ecirc;n men trong chai. Ch&iacute;nh qu&aacute; tr&igrave;nh l&ecirc;n men trong chai đ&atilde; tạo ra kh&iacute; CO2&nbsp;- ch&iacute;nh l&agrave; nguy&ecirc;n nh&acirc;n dẫn tới sự sủi tăm của rượu vang.</p>\r\n\r\n<p>Moscato Spumante được Wineplaza đảm bảo về chất lượng v&agrave; hương vị. Bạn sẽ được ho&agrave;n tiền 100% nếu cảm thấy Moscato D&rsquo;Asti kh&ocirc;ng l&agrave;m bạn h&agrave;i l&ograve;ng với bất cứ l&yacute; do g&igrave;.</p>\r\n\r\n<p><strong>Đặc t&iacute;nh</strong>:&nbsp;Moscato Spumante sủi nhẹ nh&agrave;ng v&agrave; c&oacute; mầu v&agrave;ng rơm thanh tho&aacute;t c&ugrave;ng vị ngọt thanh đầy sống động. C&oacute; m&ugrave;i thơm dịu nhẹ - l&agrave; sự kết hợp h&agrave;i h&ograve;a giữa m&ugrave;i hoa chanh, bạc h&agrave; v&agrave; quế. Hương thơm của giống nho Moscato l&agrave; độc nhất v&ocirc; nhị, rất kh&oacute; c&oacute; thể nhầm với c&aacute;c giống nho kh&aacute;c.</p>\r\n\r\n<p><strong>Kết hợp đồ ăn</strong>:&nbsp;Th&iacute;ch hợp nhất khi uống k&egrave;m tốt nhất với tr&aacute;i c&acirc;y tươi, b&aacute;nh ngọt, c&aacute;c m&oacute;n &Aacute; Ch&acirc;u. Chai vang ướp lạnh l&agrave; l&yacute; tưởng cho một ng&agrave;y h&egrave; oi bức.</p>\r\n\r\n<p><strong>Lưu &yacute;:</strong>&nbsp;Thưởng thức tuyệt vời nhất khi được ướp lạnh ở nhiệt độ khoảng 6<sup>o</sup>C-8<sup>o</sup>C</p>', 'moscato-spumante'),
+(48, 2, 53, 'Moscato Spumante', '<p>Rượu vang nổ (sparkling) Moscato Spumante l&agrave; người chị em song sinh với nh&atilde;n vang trắng DOCG&nbsp;nổi tiếng của Italy:&nbsp;<a data-mce-href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html" href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html">Moscato D&rsquo;Asti</a>. Ho&agrave;n hảo trong những ng&agrave;y h&egrave; oi n&oacute;ng c&ugrave;ng với bạn b&egrave; v&agrave; người th&acirc;n</p>\r\n\r\n<p><strong>Moscato Spumante</strong></p>\r\n\r\n<p><strong>H&atilde;ng sản xuất:</strong>&nbsp;Francesco Capetta -&nbsp;<a data-mce-href="http://wineplaza.vn/italy.html" href="http://wineplaza.vn/italy.html">Italy</a></p>\r\n\r\n<p><strong>Loại vang:</strong>&nbsp;<a data-mce-href="http://wineplaza.vn/vang-no-sparkling-wines.html" href="http://wineplaza.vn/vang-no-sparkling-wines.html">Vang nổ</a>&nbsp;(Sparkling)</p>\r\n\r\n<p><strong>Nồng độ cồn:</strong>&nbsp;6,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch:</strong>&nbsp;750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho:</strong><strong>&nbsp;</strong>Moscato (Muscat Blanc)</p>\r\n\r\n<p><strong>Đ&aacute;nh gi&aacute;:</strong>&nbsp;Chất lượng ho&agrave;n hảo &ndash; Wineplaza bảo ho&agrave;n tiền nếu thấy kh&ocirc;ng ngon</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<u>wineplaza.vn</u>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911 848 898 (HN) hoặc 0911 848 889 (HCM)</strong></p>\r\n\r\n<p><strong>Rượu vang nổ Moscato Spumante</strong></p>\r\n\r\n<p>Rượu Sparkling Moscato Spumante l&agrave; người chị em song sinh với nh&atilde;n vang trắng DOCG (<a data-mce-href="http://wineplaza.vn/y-nghia-cac-thuat-ngu-va-nhan-ruou-vang-trong-tieng-y.html" href="http://wineplaza.vn/y-nghia-cac-thuat-ngu-va-nhan-ruou-vang-trong-tieng-y.html">T&igrave;m hiểu luật rượu vang Italy</a>) nổi tiếng của Italy:&nbsp;<a data-mce-href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html" href="http://wineplaza.vn/ruou-vang-trang-italy-moscatto-dasti.html">Moscato D&rsquo;Asti</a>. C&oacute; hương vị c&oacute; nhiều điểm giống Moscato như l&agrave; m&ugrave;i hương độc đ&aacute;o hay hương vị sảng kho&aacute;i những Moscato Spumante c&oacute; nhiều Gas hơn. Để sản xuất, những tr&aacute;i nho sẽ được loại bỏ hạt v&agrave; &eacute;p bằng tay một c&aacute;ch cẩn thận nhất c&oacute; thể ngay sau khi được h&aacute;i để giữ được hương thơm. Qu&aacute; tr&igrave;nh sản xuất v&agrave; ủ men phức tạp sau đ&oacute; l&agrave; cả một nghệ thuật bởi sự cầu k&igrave; về kĩ thuật giữ lạnh, kiểm so&aacute;t độ l&ecirc;n men v&agrave; c&aacute;ch ủ để tạo ra sản phẩm ho&agrave;n hảo. Tuy nhi&ecirc;n qu&aacute; tr&igrave;nh l&ecirc;n men sẽ được ph&acirc;n l&agrave;m 2 qu&aacute; tr&igrave;nh: L&ecirc;n men trong th&ugrave;ng v&agrave; l&ecirc;n men trong chai. Ch&iacute;nh qu&aacute; tr&igrave;nh l&ecirc;n men trong chai đ&atilde; tạo ra kh&iacute; CO2&nbsp;- ch&iacute;nh l&agrave; nguy&ecirc;n nh&acirc;n dẫn tới sự sủi tăm của rượu vang.</p>\r\n\r\n<p>Moscato Spumante được Wineplaza đảm bảo về chất lượng v&agrave; hương vị. Bạn sẽ được ho&agrave;n tiền 100% nếu cảm thấy Moscato D&rsquo;Asti kh&ocirc;ng l&agrave;m bạn h&agrave;i l&ograve;ng với bất cứ l&yacute; do g&igrave;.</p>\r\n\r\n<p><strong>Đặc t&iacute;nh</strong>:&nbsp;Moscato Spumante sủi nhẹ nh&agrave;ng v&agrave; c&oacute; mầu v&agrave;ng rơm thanh tho&aacute;t c&ugrave;ng vị ngọt thanh đầy sống động. C&oacute; m&ugrave;i thơm dịu nhẹ - l&agrave; sự kết hợp h&agrave;i h&ograve;a giữa m&ugrave;i hoa chanh, bạc h&agrave; v&agrave; quế. Hương thơm của giống nho Moscato l&agrave; độc nhất v&ocirc; nhị, rất kh&oacute; c&oacute; thể nhầm với c&aacute;c giống nho kh&aacute;c.</p>\r\n\r\n<p><strong>Kết hợp đồ ăn</strong>:&nbsp;Th&iacute;ch hợp nhất khi uống k&egrave;m tốt nhất với tr&aacute;i c&acirc;y tươi, b&aacute;nh ngọt, c&aacute;c m&oacute;n &Aacute; Ch&acirc;u. Chai vang ướp lạnh l&agrave; l&yacute; tưởng cho một ng&agrave;y h&egrave; oi bức.</p>\r\n\r\n<p><strong>Lưu &yacute;:</strong>&nbsp;Thưởng thức tuyệt vời nhất khi được ướp lạnh ở nhiệt độ khoảng 6<sup>o</sup>C-8<sup>o</sup>C</p>', 'moscato-spumante'),
+(49, 1, 54, 'Cantoalba Sauvignon Blanc', '<p>Cantoalba Sauvignon Blanc l&agrave; chai vang trắng được sản xuất &nbsp;100% từ giống nho Sauvignon Blanc. Rượu c&oacute; m&agrave;u v&agrave;ng s&aacute;ng &aacute;nh xanh, hương hoa phức hợp đặc trưng của giống nho Sauvignon Blanc, vị tr&ograve;n mịn v&agrave; mang hương vị kho&aacute;ng chất. Rượu cho vị chua ngay khi tiếp x&uacute;c với khoang miệng, k&iacute;ch th&iacute;ch vị gi&aacute;c, ph&ugrave; hợp để khai vị trong c&aacute;c bữa ăn.</p>\r\n\r\n<p><strong>Xuất xứ</strong>: Chile</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: La Ronciere</p>\r\n\r\n<p><strong>Khu vực</strong>: Central Valley</p>\r\n\r\n<p><strong>Nồng độ cồn</strong>: 13,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho</strong>: Nho Sauvignon Blanc</p>\r\n\r\n<p><strong>M&ugrave;a vụ</strong>: 2014</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911 848 898 (HN) hoặc 0911 848 889 (HCM)</strong></p>', 'cantoalba-sauvignon-blanc'),
+(50, 2, 54, 'Cantoalba Sauvignon Blanc', '<p>Cantoalba Sauvignon Blanc l&agrave; chai vang trắng được sản xuất &nbsp;100% từ giống nho Sauvignon Blanc. Rượu c&oacute; m&agrave;u v&agrave;ng s&aacute;ng &aacute;nh xanh, hương hoa phức hợp đặc trưng của giống nho Sauvignon Blanc, vị tr&ograve;n mịn v&agrave; mang hương vị kho&aacute;ng chất. Rượu cho vị chua ngay khi tiếp x&uacute;c với khoang miệng, k&iacute;ch th&iacute;ch vị gi&aacute;c, ph&ugrave; hợp để khai vị trong c&aacute;c bữa ăn.</p>\r\n\r\n<p><strong>Xuất xứ</strong>: Chile</p>\r\n\r\n<p><strong>H&atilde;ng sản xuất</strong>: La Ronciere</p>\r\n\r\n<p><strong>Khu vực</strong>: Central Valley</p>\r\n\r\n<p><strong>Nồng độ cồn</strong>: 13,5%</p>\r\n\r\n<p><strong>Dung t&iacute;ch</strong>: 750ml/chai, 6 chai/th&ugrave;ng</p>\r\n\r\n<p><strong>Giống nho</strong>: Nho Sauvignon Blanc</p>\r\n\r\n<p><strong>M&ugrave;a vụ</strong>: 2014</p>\r\n\r\n<p>Mọi nội dung tại&nbsp;<a data-mce-href="http://wineplaza.vn/" href="http://wineplaza.vn/">wineplaza.vn</a>&nbsp;đều c&oacute; mục đ&iacute;ch chia sẻ th&ocirc;ng tin v&agrave; t&igrave;nh y&ecirc;u với rượu vang.</p>\r\n\r\n<p>Để mua h&agrave;ng, qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ:</p>\r\n\r\n<p><strong>Hotline: 0911 848 898 (HN) hoặc 0911 848 889 (HCM)</strong></p>', 'cantoalba-sauvignon-blanc'),
+(51, 1, 55, '123123', '<p><input alt="" src="http://localhost/project-wine-center/public/images/products/ice-wine-bottles_256135.jpg" type="image" /></p>', '123123'),
+(52, 1, 56, '123123', '<p><input alt="" src="http://localhost/project-wine-center/public/images/products/ice-wine-bottles_256135.jpg" type="image" />12323</p>', '123123'),
+(53, 2, 56, '231231', '<p>12313</p>', '231231'),
+(54, 1, 57, '123123', '<p>21123213</p>', '123123'),
+(55, 2, 57, '12312', '<p>13123</p>', '12312');
 
 -- --------------------------------------------------------
 
@@ -821,8 +927,8 @@ CREATE TABLE `hbb_slider` (
 --
 
 INSERT INTO `hbb_slider` (`id`, `link`, `status`, `created_at`, `updated_at`, `sort_order`) VALUES
-(1, 'banner.jpg', 1, '2017-07-17 06:58:20', '2017-07-16 16:58:20', 1),
-(9, 'default.jpg', 1, '2017-07-16 17:10:48', '2017-07-16 17:10:48', 2);
+(9, 'banner.jpg', 1, '2017-07-20 03:52:47', '2017-07-19 20:52:51', 2),
+(10, '1 (1).jpg', 1, '2017-07-20 06:34:39', '2017-07-19 23:34:43', 1);
 
 -- --------------------------------------------------------
 
@@ -838,6 +944,14 @@ CREATE TABLE `hbb_subscribe` (
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `hbb_subscribe`
+--
+
+INSERT INTO `hbb_subscribe` (`id`, `email`, `created_at`, `updated_at`, `status`) VALUES
+(2, 'thuykim0105@gmail.com', '2017-07-17 20:37:38', '2017-07-17 20:37:38', 1),
+(3, 'uhmbanjkimxinhdep@gmail.com', '2017-07-20 03:38:38', '2017-07-19 20:39:33', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -850,12 +964,22 @@ CREATE TABLE `hbb_subscribe_wine` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `status` tinyint(1) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `language_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
   `phone` varchar(255) NOT NULL,
-  `expert_id` int(11) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `content` text NOT NULL
+  `date` varchar(255) NOT NULL,
+  `message` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hbb_subscribe_wine`
+--
+
+INSERT INTO `hbb_subscribe_wine` (`id`, `created_at`, `updated_at`, `status`, `email`, `name`, `language_id`, `product_id`, `phone`, `date`, `message`) VALUES
+(1, '2017-07-17 23:57:51', '2017-07-17 23:57:51', 0, 'thuykim0105@gmail.com', 'Kim', 2, 40, '01696855433', '07/18/2017 10:00 AM', 'Nội dung'),
+(2, '2017-07-20 04:26:52', '2017-07-19 21:27:47', 1, 'kim@1234556', '1', 2, 10, '213', '07/25/2017 12:00 AM', '123123'),
+(4, '2017-07-18 00:07:50', '2017-07-18 00:07:50', 0, 'thuykim0105@gmail.com', '3', 2, 2, '01696855433', '07/26/2017 12:00 AM', '13123');
 
 -- --------------------------------------------------------
 
@@ -891,7 +1015,7 @@ CREATE TABLE `hbb_system_config` (
 --
 
 INSERT INTO `hbb_system_config` (`id`, `logo`, `facebook_link`, `twiter_link`, `googleplus_link`, `linked_link`, `youtube_link`, `email`, `phone_number`, `hotline`, `google_analytic`, `system_theme`, `system_favicon`, `orther`, `seo_description`, `seo_keyword`, `seo_title`, `seo_author`, `system_email`, `system_password_email`) VALUES
-(1, '123123', 'https://www.facebook.com/hbbsolutions/', '123', '123', '123', '123', '123', '123', '123', '123', '123', '123', '123', '123', '123', '123', 123, '123234', '123');
+(1, '123123', 'https://www.facebook.com/hbbsolutions/', '123', '123', '123', '123', '123', '123', '123', '<script></script>', '123', '123', '123', '123', '123', 'Wine Center', 123, '123234', '123');
 
 -- --------------------------------------------------------
 
@@ -909,7 +1033,7 @@ CREATE TABLE `hbb_user` (
   `status` tinyint(1) NOT NULL,
   `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `update_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `remember_token` text NOT NULL
+  `remember_token` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -917,7 +1041,10 @@ CREATE TABLE `hbb_user` (
 --
 
 INSERT INTO `hbb_user` (`id`, `username`, `email`, `password`, `fullname`, `avatar`, `status`, `create_at`, `update_at`, `remember_token`) VALUES
-(1, 'thangle', 'lecongthang454@gmail.com', '123123', 'Lê Công Thăng', '', 1, '2017-07-06 17:00:00', '2017-07-06 17:00:00', '');
+(1, 'thangle', 'lecongthang454@gmail.com', '123123', 'Lê Công Thăng', 'default.png', 1, '2017-07-20 08:28:28', '2017-07-06 17:00:00', ''),
+(2, 'tinmai', 'tinsqt@gmail.com', '123', 'Mai Trần Chí Tín', 'default.png', 0, '2017-07-20 10:14:39', '2017-07-20 01:27:18', NULL),
+(3, 'test', 'a@gmail.com', '123', 'test', 'default.png', 1, '2017-07-20 01:36:48', '2017-07-20 01:36:48', NULL),
+(4, '456', '456@132', '123', '456', 'default.png', 1, '2017-07-20 01:47:44', '2017-07-20 01:47:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -930,6 +1057,25 @@ CREATE TABLE `hbb_user_permission` (
   `user_id` int(11) NOT NULL,
   `permission_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hbb_user_permission`
+--
+
+INSERT INTO `hbb_user_permission` (`id`, `user_id`, `permission_id`) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 4, 1),
+(4, 4, 3),
+(5, 4, 8),
+(6, 5, 1),
+(7, 5, 3),
+(8, 1, 1),
+(9, 1, 3),
+(10, 1, 1),
+(11, 1, 3),
+(12, 1, 8),
+(13, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -951,9 +1097,8 @@ INSERT INTO `hbb_wine_center` (`id`, `created_at`, `updated_at`) VALUES
 (1, '2017-07-17 01:41:26', '2017-07-17 02:24:28'),
 (2, '2017-07-17 01:41:26', '2017-07-17 00:31:18'),
 (3, '2017-07-17 01:41:33', '2017-07-17 02:19:21'),
-(4, '2017-07-17 03:00:41', '2017-07-17 03:26:26'),
-(5, '2017-07-17 03:00:41', '2017-07-17 04:30:25'),
-(6, '2017-07-17 03:00:49', '2017-07-17 00:21:25');
+(4, '2017-07-20 07:27:25', '2017-07-20 00:27:29'),
+(5, '2017-07-18 08:37:33', '2017-07-18 01:37:31');
 
 -- --------------------------------------------------------
 
@@ -981,12 +1126,10 @@ INSERT INTO `hbb_wine_center_translation` (`id`, `wine_center_id`, `language_id`
 (4, 2, 2, 'Cam ket chat luong', 'Tại sao lại chọn mua rượu vang tại Wine Center? Bởi tại Winecenter bạn sẽ được:<br>\r\n\r\n- Uống thử rượu vang miễn phí: Mục tiêu tối thượng của chúng tôi là giúp bạn chọn loại rượu chuẩn gu của mình!<br>\r\n\r\n- Yên tâm về chất lượng của rượu: Toàn bộ rượu vang của wineplaza.vn được nhập khẩu trực tiếp từ nhà sản xuất và có đầy đủ giấy tờ hải quan để đảm bảo về chất lượng của sản phẩm.\r\n<br>\r\n- Đổi, trả sản phẩm nếu không vừa lòng: Duy nhất – chỉ có tại Wineplaza.vn. Bởi chúng tôi tin rằng đó là lỗi của mình vì đã không giúp bạn chọn được loại rượu vang như ý. Hoàn tiền 100% nếu khách hàng không hài lòng.<br>\r\n\r\n- Tư vấn cách thưởng thức cũng như chia sẻ các thông tin thú vị về rượu vang: Đội ngũ tư vấn giàu kinh nghiệm và website winecenter.vn sẽ giúp bạn cảm thấy rượu vang thú vị hơn bất cứ đồ uống nào khác.<br>\r\n\r\n- Đảm bảo bán đúng giá thị trường: Giá sản phẩm tại winecenterluôn luôn được tính toán và so sánh với thị trường để đảm bảo lợi ích của bạn. Hãy yên tâm vì chúng tôi luôn nói đúng giá trị thật của chai rượu.<br>\r\n\r\n- Phục vụ 24/24: Số hotline luôn luôn sẵn sàng phục vụ bạn, kể cả trong những dịp lễ tết.\r\n\r\n- Hỗ trợ về thiết kế, in ấn các sản phẩm truyền thông: Khách hàng là nhà hàng, cửa hiệu hoặc shop cá nhân có nhu cầu thiết kế menu, Winenotes… được chúng tôi hỗ trợ hoàn toàn miễn phí.\r\n\r\nĐể được hưởng toàn bộ những lợi ích trên, bạn chỉ cần nhấc điện thoại và gọi tới số:\r\nHà Nội:                0911 848 898\r\nTP Hồ Chí Minh:  0911 848 889', 'commitment-to-quality'),
 (5, 3, 1, 'Lịch sử phát triển', 'Được thành lập từ năm 2015 bởi thành quả hợp tác của chuyên gia rượu vang Đào Trọng Thắng và những người bạn đồng hành đam mê rượu vang, Wineplaza hội tụ đầy đủ những yếu tố để trở thành người cung cấp rượu vang hàng đầu tại Việt Nam. Hiểu rõ gu thưởng thức của khách hàng, mọi sản phẩm tại Wineplaza đều được nhập khẩu trực tiếp từ các nhà sản xuất danh tiếng, sau đó được các chuyên gia rượu vang hàng đầu kiểm tra và thử nghiệm kĩ lưỡng trước khi giới thiệu tới người tiêu dùng. Mục đích cuối cùng của chúng tôi là đảm bảo bạn được thưởng thức những sản phẩm tuyệt hảo với mức giá thấp nhất có thể.<br>\r\n\r\nNhững đối tác lớn của Wineplaza.vn có thể kể tới như: Nhà hàng Du Thuyền Elisa, Tập đoàn truyền thông Le Bros, Công ti viễn thông quân đội Viettel, Công ty xây dựng Sông Đà…', 'lich-su-phat-trien'),
 (6, 3, 2, 'Lich su phat trien', 'Được thành lập từ năm 2015 bởi thành quả hợp tác của chuyên gia rượu vang Đào Trọng Thắng và những người bạn đồng hành đam mê rượu vang, Wineplaza hội tụ đầy đủ những yếu tố để trở thành người cung cấp rượu vang hàng đầu tại Việt Nam. Hiểu rõ gu thưởng thức của khách hàng, mọi sản phẩm tại Wineplaza đều được nhập khẩu trực tiếp từ các nhà sản xuất danh tiếng, sau đó được các chuyên gia rượu vang hàng đầu kiểm tra và thử nghiệm kĩ lưỡng trước khi giới thiệu tới người tiêu dùng. Mục đích cuối cùng của chúng tôi là đảm bảo bạn được thưởng thức những sản phẩm tuyệt hảo với mức giá thấp nhất có thể.<br>\r\n\r\nNhững đối tác lớn của Wineplaza.vn có thể kể tới như: Nhà hàng Du Thuyền Elisa, Tập đoàn truyền thông Le Bros, Công ti viễn thông quân đội Viettel, Công ty xây dựng Sông Đà…', 'development-history'),
-(7, 4, 1, 'Hỏi đáp', '21', 'hoi-dap'),
-(8, 4, 2, 'Answer', '123213123213', 'answer'),
-(9, 5, 1, 'Liên hệ', 'lien hệ', 'lien-he'),
-(10, 5, 2, 'Contact', 'contact', 'contact'),
-(11, 6, 1, 'Tuyển dụng', 'tuyển dụng', 'tuyen-dung'),
-(12, 6, 2, 'Recruitment', 'Recruitment', 'recruitment');
+(9, 5, 1, 'Liên hệ', '<p>lien he voi chung toi</p>', 'lien-he'),
+(10, 5, 2, 'Contact', '<p>contact with us</p>\r\n\r\n<p>&nbsp;</p>', 'contact'),
+(13, 4, 1, 'Hỏi Đáp', '<p><strong>Hỏi: C&oacute; thể mua rượu vang Wineplaza ở đ&acirc;u? </strong></p>\r\n\r\n<p>Trả lời: Wineplaza hiện đ&atilde; c&oacute; mặt ở c&aacute;c th&agrave;nh phố lớn như H&agrave; Nội, Th&agrave;nh Phố Hồ Ch&iacute;nh Minh, Hải Ph&ograve;ng, kh&aacute;ch h&agrave;ng c&oacute; thể đến trực tiếp cửa h&agrave;ng để mua sản phẩm hoặc c&oacute; thể li&ecirc;n hệ hotline 0911848898 hoặc 0911110073/ 0911110031 để được hỗ trợ giao h&agrave;ng tr&ecirc;n to&agrave;n quốc. Địa chỉ cụ thể: H&agrave; Nội- 240 Nghi T&agrave;m, T&acirc;y Hồ; TP Hồ Ch&iacute; Minh - 288B Bạch Đằng, P24,B&igrave;nh Thạnh; Hải Ph&ograve;ng: 19 Trần Kh&aacute;nh Dư, Ng&ocirc; Quyền.</p>\r\n\r\n<p><strong>Hỏi: T&ocirc;i muốn đặt h&agrave;ng rượu vang online c&oacute; được kh&ocirc;ng? </strong></p>\r\n\r\n<p>Trả lời: Cảm ơn qu&yacute; kh&aacute;ch, nhưng rất tiếc hiện tại ch&uacute;ng t&ocirc;i kh&ocirc;ng tiếp nhận đặt h&agrave;ng qua online v&igrave; t&iacute;nh chất đặc th&ugrave; của rượu vang, qu&yacute; kh&aacute;ch c&oacute; thể li&ecirc;n hệ đặt h&agrave;ng qua hotline của ch&uacute;ng t&ocirc;i 0911848898 hoặc 0911110073/ 0911110031 để được hỗ trợ nhanh nhất v&agrave; ch&uacute;ng t&ocirc;i sẽ giao h&agrave;ng tận nơi ngay sau khi qu&yacute; kh&aacute;ch đặt h&agrave;ng. Rất vui được phục vụ qu&yacute; kh&aacute;ch.</p>\r\n\r\n<p><strong>Hỏi: Wineplaza c&oacute; dịch vụ g&igrave; hỗ trợ kh&aacute;ch h&agrave;ng sau b&aacute;n h&agrave;ng kh&ocirc;ng?</strong></p>\r\n\r\n<p>Trả lời: Wineplaza c&oacute; đội ngũ tư vấn gi&agrave;u kinh nghiệm v&agrave; website Wineplaza.vn sẽ gi&uacute;p bạn cảm thấy rượu vang hấp dẫn hơn bất cứ đồ uống n&agrave;o kh&aacute;c, cũng như chia sẻ c&aacute;c th&ocirc;ng tin th&uacute; vị về rượu vang. Đặc biệt chỉ c&oacute; duy nhất tại Wineplaza.vn qu&yacute; kh&aacute;ch được đổi, trả sản phẩm nếu kh&ocirc;ng vừa l&ograve;ng, bởi ch&uacute;ng t&ocirc;i tin rằng đ&oacute; l&agrave; lỗi của m&igrave;nh v&igrave; đ&atilde; kh&ocirc;ng gi&uacute;p bạn chọn được loại rượu vang như &yacute;.</p>\r\n\r\n<p><strong>Hỏi: Rượu vang Wineplaza c&oacute; g&igrave; đặc biệt? </strong></p>\r\n\r\n<p>Trả Lời: &ldquo;Tại Wineplaza kh&ocirc;ng l&agrave;m ra rượu vang nhưng ch&uacute;ng t&ocirc;i biết r&otilde; đ&acirc;u l&agrave; một chai vang chất lượng!&rdquo;Hiểu r&otilde; gu thưởng thức của kh&aacute;ch h&agrave;ng, mọi sản phẩm tại Wineplaza đều được nhập khẩu trực tiếp từ c&aacute;c nh&agrave; sản xuất danh tiếng từ Ph&aacute;p, &Yacute;, T&acirc;y Ban Nha, Chile,... Sau đ&oacute; được c&aacute;c chuy&ecirc;n gia rượu vang h&agrave;ng đầu kiểm tra v&agrave; thử nghiệm kĩ lưỡng trước khi giới thiệu tới người ti&ecirc;u d&ugrave;ng.</p>\r\n\r\n<p><strong>Hỏi: Mua rượu vang Wineplaza c&oacute; được thử trước kh&ocirc;ng? </strong></p>\r\n\r\n<p>Trả lời: C&oacute;. Mục ti&ecirc;u tối thượng của Wineplaza l&agrave; gi&uacute;p kh&aacute;ch h&agrave;ng chọn loại rượu chuẩn gu của m&igrave;nh n&ecirc;n qu&yacute; kh&aacute;ch được uống thử miễn ph&iacute; trước khi mua. Qu&yacute; kh&aacute;ch c&oacute; thể v&agrave;o trang sản phẩm của wineplaza.vn để lựa chọn v&agrave; đăng k&yacute; uống thử. Hỏi: Rượu vang Wineplaza c&oacute; gi&aacute; như thế n&agrave;o? Trả lời: Gi&aacute; sản phẩm tại wineplaza lu&ocirc;n lu&ocirc;n được t&iacute;nh to&aacute;n v&agrave; so s&aacute;nh với thị trường để đảm bảo lợi &iacute;ch của Kh&aacute;ch h&agrave;ng. Mục đ&iacute;ch cuối c&ugrave;ng của ch&uacute;ng t&ocirc;i l&agrave; đảm bảo Kh&aacute;ch h&agrave;ng được thưởng thức những sản phẩm tuyệt hảo với mức gi&aacute; thấp nhất c&oacute; thể.</p>', 'hoi-dap'),
+(14, 4, 2, 'FAQ', '<p><strong>Hỏi: C&oacute; thể mua rượu vang Wineplaza ở đ&acirc;u? </strong></p>\r\n\r\n<p>Trả lời: Wineplaza hiện đ&atilde; c&oacute; mặt ở c&aacute;c th&agrave;nh phố lớn như H&agrave; Nội, Th&agrave;nh Phố Hồ Ch&iacute;nh Minh, Hải Ph&ograve;ng, kh&aacute;ch h&agrave;ng c&oacute; thể đến trực tiếp cửa h&agrave;ng để mua sản phẩm hoặc c&oacute; thể li&ecirc;n hệ hotline 0911848898 hoặc 0911110073/ 0911110031 để được hỗ trợ giao h&agrave;ng tr&ecirc;n to&agrave;n quốc. Địa chỉ cụ thể: H&agrave; Nội- 240 Nghi T&agrave;m, T&acirc;y Hồ; TP Hồ Ch&iacute; Minh - 288B Bạch Đằng, P24,B&igrave;nh Thạnh; Hải Ph&ograve;ng: 19 Trần Kh&aacute;nh Dư, Ng&ocirc; Quyền.</p>\r\n\r\n<p><strong>Hỏi: T&ocirc;i muốn đặt h&agrave;ng rượu vang online c&oacute; được kh&ocirc;ng? </strong></p>\r\n\r\n<p>Trả lời: Cảm ơn qu&yacute; kh&aacute;ch, nhưng rất tiếc hiện tại ch&uacute;ng t&ocirc;i kh&ocirc;ng tiếp nhận đặt h&agrave;ng qua online v&igrave; t&iacute;nh chất đặc th&ugrave; của rượu vang, qu&yacute; kh&aacute;ch c&oacute; thể li&ecirc;n hệ đặt h&agrave;ng qua hotline của ch&uacute;ng t&ocirc;i 0911848898 hoặc 0911110073/ 0911110031 để được hỗ trợ nhanh nhất v&agrave; ch&uacute;ng t&ocirc;i sẽ giao h&agrave;ng tận nơi ngay sau khi qu&yacute; kh&aacute;ch đặt h&agrave;ng. Rất vui được phục vụ qu&yacute; kh&aacute;ch.</p>\r\n\r\n<p><strong>Hỏi: Wineplaza c&oacute; dịch vụ g&igrave; hỗ trợ kh&aacute;ch h&agrave;ng sau b&aacute;n h&agrave;ng kh&ocirc;ng?</strong></p>\r\n\r\n<p>Trả lời: Wineplaza c&oacute; đội ngũ tư vấn gi&agrave;u kinh nghiệm v&agrave; website Wineplaza.vn sẽ gi&uacute;p bạn cảm thấy rượu vang hấp dẫn hơn bất cứ đồ uống n&agrave;o kh&aacute;c, cũng như chia sẻ c&aacute;c th&ocirc;ng tin th&uacute; vị về rượu vang. Đặc biệt chỉ c&oacute; duy nhất tại Wineplaza.vn qu&yacute; kh&aacute;ch được đổi, trả sản phẩm nếu kh&ocirc;ng vừa l&ograve;ng, bởi ch&uacute;ng t&ocirc;i tin rằng đ&oacute; l&agrave; lỗi của m&igrave;nh v&igrave; đ&atilde; kh&ocirc;ng gi&uacute;p bạn chọn được loại rượu vang như &yacute;.</p>\r\n\r\n<p><strong>Hỏi: Rượu vang Wineplaza c&oacute; g&igrave; đặc biệt? </strong></p>\r\n\r\n<p>Trả Lời: &ldquo;Tại Wineplaza kh&ocirc;ng l&agrave;m ra rượu vang nhưng ch&uacute;ng t&ocirc;i biết r&otilde; đ&acirc;u l&agrave; một chai vang chất lượng!&rdquo;Hiểu r&otilde; gu thưởng thức của kh&aacute;ch h&agrave;ng, mọi sản phẩm tại Wineplaza đều được nhập khẩu trực tiếp từ c&aacute;c nh&agrave; sản xuất danh tiếng từ Ph&aacute;p, &Yacute;, T&acirc;y Ban Nha, Chile,... Sau đ&oacute; được c&aacute;c chuy&ecirc;n gia rượu vang h&agrave;ng đầu kiểm tra v&agrave; thử nghiệm kĩ lưỡng trước khi giới thiệu tới người ti&ecirc;u d&ugrave;ng.</p>\r\n\r\n<p><strong>Hỏi: Mua rượu vang Wineplaza c&oacute; được thử trước kh&ocirc;ng? </strong></p>\r\n\r\n<p>Trả lời: C&oacute;. Mục ti&ecirc;u tối thượng của Wineplaza l&agrave; gi&uacute;p kh&aacute;ch h&agrave;ng chọn loại rượu chuẩn gu của m&igrave;nh n&ecirc;n qu&yacute; kh&aacute;ch được uống thử miễn ph&iacute; trước khi mua. Qu&yacute; kh&aacute;ch c&oacute; thể v&agrave;o trang sản phẩm của wineplaza.vn để lựa chọn v&agrave; đăng k&yacute; uống thử. Hỏi: Rượu vang Wineplaza c&oacute; gi&aacute; như thế n&agrave;o? Trả lời: Gi&aacute; sản phẩm tại wineplaza lu&ocirc;n lu&ocirc;n được t&iacute;nh to&aacute;n v&agrave; so s&aacute;nh với thị trường để đảm bảo lợi &iacute;ch của Kh&aacute;ch h&agrave;ng. Mục đ&iacute;ch cuối c&ugrave;ng của ch&uacute;ng t&ocirc;i l&agrave; đảm bảo Kh&aacute;ch h&agrave;ng được thưởng thức những sản phẩm tuyệt hảo với mức gi&aacute; thấp nhất c&oacute; thể.</p>', 'faq');
 
 --
 -- Indexes for dumped tables
@@ -1198,32 +1341,32 @@ ALTER TABLE `hbb_wine_center_translation`
 -- AUTO_INCREMENT for table `hbb_address`
 --
 ALTER TABLE `hbb_address`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `hbb_address_translation`
 --
 ALTER TABLE `hbb_address_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `hbb_brand`
 --
 ALTER TABLE `hbb_brand`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `hbb_brand_translation`
 --
 ALTER TABLE `hbb_brand_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `hbb_collection`
 --
 ALTER TABLE `hbb_collection`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `hbb_collection_translation`
 --
 ALTER TABLE `hbb_collection_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `hbb_comment`
 --
@@ -1233,27 +1376,27 @@ ALTER TABLE `hbb_comment`
 -- AUTO_INCREMENT for table `hbb_contact`
 --
 ALTER TABLE `hbb_contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `hbb_country`
 --
 ALTER TABLE `hbb_country`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `hbb_country_translation`
 --
 ALTER TABLE `hbb_country_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `hbb_label`
 --
 ALTER TABLE `hbb_label`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `hbb_label_translation`
 --
 ALTER TABLE `hbb_label_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 --
 -- AUTO_INCREMENT for table `hbb_language`
 --
@@ -1268,12 +1411,12 @@ ALTER TABLE `hbb_menu`
 -- AUTO_INCREMENT for table `hbb_menu_news`
 --
 ALTER TABLE `hbb_menu_news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `hbb_menu_news_translation`
 --
 ALTER TABLE `hbb_menu_news_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `hbb_menu_translation`
 --
@@ -1283,27 +1426,27 @@ ALTER TABLE `hbb_menu_translation`
 -- AUTO_INCREMENT for table `hbb_news`
 --
 ALTER TABLE `hbb_news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `hbb_news_translation`
 --
 ALTER TABLE `hbb_news_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `hbb_permission`
 --
 ALTER TABLE `hbb_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `hbb_products`
 --
 ALTER TABLE `hbb_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 --
 -- AUTO_INCREMENT for table `hbb_products_translation`
 --
 ALTER TABLE `hbb_products_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `hbb_product_image`
 --
@@ -1323,17 +1466,17 @@ ALTER TABLE `hbb_recruitment_translation`
 -- AUTO_INCREMENT for table `hbb_slider`
 --
 ALTER TABLE `hbb_slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `hbb_subscribe`
 --
 ALTER TABLE `hbb_subscribe`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `hbb_subscribe_wine`
 --
 ALTER TABLE `hbb_subscribe_wine`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `hbb_system_config`
 --
@@ -1343,12 +1486,12 @@ ALTER TABLE `hbb_system_config`
 -- AUTO_INCREMENT for table `hbb_user`
 --
 ALTER TABLE `hbb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `hbb_user_permission`
 --
 ALTER TABLE `hbb_user_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `hbb_wine_center`
 --
@@ -1358,7 +1501,7 @@ ALTER TABLE `hbb_wine_center`
 -- AUTO_INCREMENT for table `hbb_wine_center_translation`
 --
 ALTER TABLE `hbb_wine_center_translation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
