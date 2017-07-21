@@ -51,7 +51,7 @@ Route::get('/admin/resize-image','Admin\PermissionController@getResize')->middle
 Route::post('/admin/resize-image','Admin\PermissionController@postResize')->middleware('not.login');
 
 //menu management
-Route::get('/admin/{id}-menu-management','Admin\AdminController@getMenu')->middleware('not.login');
+Route::get('/admin/{id}-menu-management','Admin\AdminController@getMenuAdmin')->middleware('not.login');
 Route::get('/admin/create-new-menu','Admin\AdminController@getCreateNewMenu')->middleware('not.login');
 Route::post('/admin/create-new-menu','Admin\AdminController@postCreateNewMenu')->middleware('not.login');
 Route::get('/admin/delete-menu-{id}','Admin\AdminController@getDeleteMenu')->middleware('not.login');
@@ -77,7 +77,7 @@ Route::post('/admin/product/edit-product-{id}','Admin\ProductController@postEdit
 Route::get('/admin/product/delete-product-{id}','Admin\ProductController@getDeleteProduct')->middleware('not.login');
 Route::post('/admin/product/delete-product-{id}','Admin\ProductController@postDeleteProduct')->middleware('not.login');
 //collection
-Route::get('/admin/{id}-collection','Admin\CollectionController@getCollection')->middleware('not.login');
+Route::get('/admin/{id}-collection','Admin\CollectionController@getCollectionAdmin')->middleware('not.login');
 Route::get('/admin/collection/create-new-collection','Admin\CollectionController@getCreateCollection')->middleware('not.login');
 Route::post('/admin/collection/create-new-collection','Admin\CollectionController@postCreateCollection')->middleware('not.login');
 Route::get('/admin/collection/edit-collection-{id}','Admin\CollectionController@getEditCollection')->middleware('not.login');
@@ -85,7 +85,7 @@ Route::post('/admin/collection/edit-collection-{id}','Admin\CollectionController
 Route::get('/admin/collection/delete-collection-{id}','Admin\CollectionController@getDeleteCollection')->middleware('not.login');
 Route::post('/admin/collection/delete-collection-{id}','Admin\CollectionController@postDeleteCollection')->middleware('not.login');
 //brand
-Route::get('/admin/{id}-brand','Admin\BrandController@getBrand')->middleware('not.login');
+Route::get('/admin/{id}-brand','Admin\BrandController@getBrandAdmin')->middleware('not.login');
 Route::get('/admin/brand/create-brand','Admin\BrandController@getCreateNewBrand')->middleware('not.login');
 Route::post('/admin/brand/create-brand','Admin\BrandController@postCreateNewBrand')->middleware('not.login');
 Route::get('/admin/brand/edit-brand-{id}','Admin\BrandController@getDetailBrand')->middleware('not.login');
@@ -126,7 +126,7 @@ Route::get('/admin/wine-center/delete-wine-center-{id}','Admin\WineCenterControl
 Route::post('/admin/wine-center/delete-wine-center-{id}','Admin\WineCenterController@postDeleteWineCenter')->middleware('not.login');
 
 //Address management
-Route::get('/admin/{id}-address-management','Admin\AddressController@getAddress')->middleware('not.login');
+Route::get('/admin/{id}-address-management','Admin\AddressController@getAddressAdmin')->middleware('not.login');
 Route::get('/admin/address/create-address','Admin\AddressController@getCreateAddress')->middleware('not.login');
 Route::post('/admin/address/create-address','Admin\AddressController@postCreateAddress')->middleware('not.login');
 Route::get('/admin/address/edit-address-{id}','Admin\AddressController@getEditAddress')->middleware('not.login');
@@ -137,3 +137,9 @@ Route::post('/admin/address/delete-address-{id}','Admin\AddressController@postDe
 //Labels
 Route::get('/admin/{id}-labels-management','Admin\LabelsController@getLabelsAdmin')->middleware('not.login');
 Route::post('/admin/save-label','Admin\LabelsController@SaveLabelAdmin')->middleware('not.login');
+Route::get('/admin/1/save-label','Admin\LabelsController@getLabelsAdmin')->middleware('not.login');
+
+//Subscribe management
+Route::get('/admin/subscribe-management','Admin\SubscribeController@getSubscribeAdmin')->middleware('not.login');
+Route::get('/admin/subscribe/edit-subscribe-{id}','Admin\SubscribeController@getEditSubscribe')->middleware('not.login');
+

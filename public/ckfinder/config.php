@@ -33,8 +33,8 @@ $config['authentication'] = function () {
 /*============================ License Key ============================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = '';
-$config['licenseKey']  = '';
+$config['licenseName'] = 'Wine Center';
+$config['licenseKey']  = 'GXNX53U9E832VFAVL6INFWW0R55HJ';
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
@@ -51,8 +51,8 @@ $config['privateDir'] = array(
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_images
 
 $config['images'] = array(
-    'maxWidth'  => 1600,
-    'maxHeight' => 1200,
+    'maxWidth'  => 1134,
+    'maxHeight' => 600,
     'quality'   => 80,
     'sizes' => array(
         'small'  => array('width' => 480, 'height' => 320, 'quality' => 80),
@@ -60,9 +60,24 @@ $config['images'] = array(
         'large'  => array('width' => 800, 'height' => 600, 'quality' => 80)
     )
 );
+//resize image folder user
 if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/user/'){
     $config['Images']['maxWidth'] = 150;
     $config['Images']['maxHeight'] = 150;
+}
+//resize image folder slider
+if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/slider/'){
+    $config['Slider']['maxWidth'] = 1340;
+    $config['Slider']['maxHeight'] = 600;
+}
+//resize image folder slider
+if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/news/'){
+    $config['Images']['maxWidth'] = 255;
+    $config['Images']['maxHeight'] = 340;
+}
+if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/images/products/'){
+    $config['Images']['maxWidth'] = 255;
+    $config['Images']['maxHeight'] = 340;
 }
 /*=================================== Backends ========================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_backends
@@ -70,7 +85,7 @@ if(isset($_GET['currentFolder']) && urldecode($_GET['currentFolder']) == '/image
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => 'http://'.$_SERVER['SERVER_NAME'].'/project-wine-center/public/',
+    'baseUrl'      => 'http://'.$_SERVER['SERVER_NAME'].':8080//project-wine-center/public/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
@@ -87,9 +102,7 @@ $config['plugins'][] = 'Watermark';
 
 /*================================ Resource Types =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_resourceTypes
-
 $config['defaultResourceTypes'] = '';
-
 $config['resourceTypes'][] = array(
     'name'              => 'Images', // Single quotes not allowed.
     'directory'         => 'images',
@@ -98,7 +111,46 @@ $config['resourceTypes'][] = array(
     'deniedExtensions'  => '',
     'backend'           => 'default'
 );
-
+$config['resourceTypes'][] = array(
+    'name'              => 'Slider', // Single quotes not allowed.
+    'directory'         => 'images/slider',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+$config['resourceTypes'][] = array(
+    'name'              => 'Product', // Single quotes not allowed.
+    'directory'         => 'images/products',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+$config['resourceTypes'][] = array(
+    'name'              => 'News', // Single quotes not allowed.
+    'directory'         => 'images/news',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+$config['resourceTypes'][] = array(
+    'name'              => 'Collection', // Single quotes not allowed.
+    'directory'         => 'images/collection',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+$config['resourceTypes'][] = array(
+    'name'              => 'User', // Single quotes not allowed.
+    'directory'         => 'images/users',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
 
 
 /*================================ Access Control =====================================*/

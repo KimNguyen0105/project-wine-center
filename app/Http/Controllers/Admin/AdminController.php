@@ -101,7 +101,7 @@ class AdminController extends Controller
 
     }
 
-    public function getMenu($id)
+    public function getMenuAdmin($id)
     {
         if ($id != null) {
             $language = HbbLanguage::get();
